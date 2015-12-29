@@ -1,0 +1,21 @@
+code
+{
+	font-family: Monaco;
+}
+pre
+{
+	font-family: Monaco;
+  background: #EEEEEE
+}
+body
+{
+	font-family: Helvetica;
+  width: 80em;
+  outline: 130px solid #fff;
+  margin: 16px auto;
+}
+h1 
+{
+  	border-bottom: 19px solid #ccc;
+  	line-height:1.6;
+}
