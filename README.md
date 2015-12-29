@@ -1,27 +1,26 @@
-## Wang Chuan's Homepage
-### Dr. Chuan Wang
+## Dr. Chuan Wang
 
 *Specialise in Computer Vision and Image/Video Processing*
 
 [CV in pdf](http://wangchuan.github.io/cv/CV_ChuanWang.pdf)
 
-#### Contact
+### Contact
 
 - Phone: (+852) 5162 6756 (HK) / (+86) 131 4751 1986 (Mainland China)
 - Email: wangchuan2400 (at) gmail (dot) com
 
-#### Objectives
+### Objectives
 
 I am seeking a position in IT industry where I can contribute my proficient programming skills, energy, high motivation and dedication to the company. My research interests include image/video processing, 3D vision, deep learning and graphics. If you have interest in me, feel free to contact me.
 
-#### Education
+### Education
 
 - Ph.D, Computer Science (Vision and Graphics), 2015, Supervised by [Prof. Wenping Wang](http://www.csis.hku.hk/people/profile.jsp?teacher=wenping), The University of Hong Kong (HKU).
 - B.Eng, Electronic Information Engineering, 2010, University of Science and Technology of China (USTC).
 
-#### Work and Research Experiences
+### Work and Research Experiences
 
-**Staff Researcher, Lenovo. **(April. 2015 - Now)
+**Staff Researcher, Lenovo.** (April. 2015 - Now)
 
 - **An Augmented Reality Application for Mobile Devices**. ([Youtube](https://youtu.be/XUTCowMHSQs))
 	- Developed an application providing augmented reality effect when camera previewing scenes containing QR code or a dish of food, to improve user experiences.
@@ -65,7 +64,7 @@ I am seeking a position in IT industry where I can contribute my proficient prog
 
 ![matting](http://wangchuan.github.io/imgs/matting.png)
 
-#### Skills
+### Skills
 
 - Proficient in Native C/C++, MATLAB.
 - Proficient in OpenCV; Familiar with OpenGL; Experience of using OpenCL, CUDA, Boost, Intel MKL, CGAL etc.
@@ -75,7 +74,7 @@ I am seeking a position in IT industry where I can contribute my proficient prog
 - Familiar with GUI design in WPF or QT; Love designing applications with fancy GUI (e.g. here by C++/C#/WPF).
 - Familiar with using Microsoft Office, Adobe Photoshop/Illustrator/Premiere, MeshLab.
 
-#### Selected Publications
+### Selected Publications
 
 - **Chuan Wang**, Yanwen Guo, Jie Zhu, Linbo Wang, Wenping Wang. Video object co-segmentation via subspace clustering and quadratic pseudo-boolean optimization in an MRF framework. IEEE Transactions on Multimedia 2014, 16(4): 903-916.
 - Jimmy SJ. Ren, Yongtao Hu, Yu-Wing Tai, **Chuan Wang**, Li Xu, Wenxiu Sun, Qiong Yan, "Look, Listen and Learn - A Multimodal LSTM for Speaker Identification", The 30th AAAI Conference on Artificial Intelligence (AAAI-16).
