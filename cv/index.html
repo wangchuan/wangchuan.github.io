@@ -69,12 +69,15 @@
 <ul>
 <li>Developed and Improved an image refocus algorithm for Lenovo dual camera phone VIBE S1, which is on sale in the market.</li>
 <li>The algorithm uses the depth information captured by the dual camera to blur the image with a spatially-variant kernel if users specify a focus point when viewing the image.</li>
-<li>To achieve real-time interaction, we utilized OpenCL to speed up the blurring process. We also utilized line-buffer idea to save memory.</li>
+<li>To achieve real-time interaction, we utilized OpenCL to speed up the blurring process. Additionally, we
+utilized block-wise processing idea to balance between speed and memory cost.</li>
 </ul>
 </li>
 </ul>
 
 <p><img src="http://wangchuan.github.io/imgs/refocus.jpg" alt="refocus"></p>
+Starting from 0:28 of the following video, you can get a clear illustration of this feature: Blur.
+<iframe width="100%" height="460" align="middle" src="https://www.youtube.com/embed/8gFGsBY3rzg" frameborder="0" allowfullscreen></iframe>
 
 <ul>
 <li>
