@@ -93,3 +93,9 @@ while (ss)
 ```
 上述代码中，会多打出一个`c`, 原因是打印完第一个`c`之后，`ss`的状态依然是正常的，即便它已经没有东西可打了。所以把`c`多输出了一次。
 这个可以形象的想象成："不到死的那一天都不是死。"
+
+<script>
+  var disqus_identifier = 'cpp-useful-code-snippets';
+  var disqus_title = '{{ page.title }}'
+  var disqus_url = '{{ page.url | prepend: site.baseurl | prepend: site.url }}'
+</script>
