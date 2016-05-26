@@ -95,7 +95,7 @@ while (ss)
 这个可以形象的想象成："不到死的那一天都不是死。"
 
 <script>
-  var disqus_identifier = 'cpp-useful-code-snippets';
+  var disqus_identifier = 'cpp-useful';
   var disqus_title = '{{ page.title }}'
   var disqus_url = '{{ page.url | prepend: site.baseurl | prepend: site.url }}'
 </script>
