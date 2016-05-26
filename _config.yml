@@ -1,14 +1,23 @@
 # Site settings
 title: Chuan Wang
-# email: your-email@domain.com
-description: >
-  A blog.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://wangchuan.github.io" # the base hostname & protocol for your site
-github_username:  wangchuan
+email: wangchuan2400@gmail.com
+description: "In me the tiger sniffs the rose."
+baseurl: ""
+url: "https://wangchuan.github.io"
+github_username: wangchuan
 
 # Build settings
-markdown: kramdown
-
-# Output settings
-permalink: none
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - fenced_code_blocks
+    - autolink
+    - tables
+    - with_toc_data
+    - html_toc
+    - strikethrough
+    - lax_spacing
+    - footnotes
+pygments: true
+permalink: pretty
