@@ -39,9 +39,3 @@ if (found != string::npos)
   string a2 = a.substr(found + 1); // a2: 45678
 }
 ```
-
-<script>
-  var disqus_identifier = 'lstm-tested';
-  var disqus_title = '{{ page.title }}'
-  var disqus_url = '{{ page.url | prepend: site.baseurl | prepend: site.url }}'
-</script>
