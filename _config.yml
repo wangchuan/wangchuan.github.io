@@ -1,12 +1,12 @@
 # Site settings
-title: Adam Paszke
+title: Chuan Wang
 # email: your-email@domain.com
 description: >
   A blog.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://apaszke.github.io" # the base hostname & protocol for your site
-twitter_username: apaszke
-github_username:  apaszke
+url: "https://wangchuan.github.io" # the base hostname & protocol for your site
+twitter_username: wangchuan
+github_username:  wangchuan
 
 # Build settings
 markdown: kramdown
