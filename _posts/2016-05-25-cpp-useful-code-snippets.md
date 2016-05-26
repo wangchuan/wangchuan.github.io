@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "C/C++ Useful Code Snippets"
-date:   2016-05-26 20:04:15
+date:   2016-05-25 20:04:15
 ---
 
 ## `priority_queue<T, vector<T>, TComp> pq`
