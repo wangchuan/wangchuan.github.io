@@ -4,10 +4,6 @@ title:  "C/C++ Useful Code Snippets"
 date:   2016-05-26 12:12:00
 ---
 
-@(Coding Snippets and Instructions)
-
-[TOC]
-
 ### C/C++ Useful Code Snippets
 #### `priority_queue<T, vector<T>, TComp> pq`
 > Note:
