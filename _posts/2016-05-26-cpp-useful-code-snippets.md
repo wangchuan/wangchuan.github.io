@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "C/C++ Useful Code Snippets"
-date:   2016-03-31 20:04:15
+date:   2016-05-26 20:04:15
 ---
 
 ## `priority_queue<T, vector<T>, TComp> pq`
@@ -10,6 +10,7 @@ date:   2016-03-31 20:04:15
 > (1) Max-heap: `TComp` should return `a < b`;
 > (2) Min-heap: `TComp` should return `a > b`;
 > (3) `priority_queue` has `top()` rather than `front()`;
+
 ```cpp
 class T
 {
@@ -30,6 +31,7 @@ priority_queue<T, vector<T>, TComp> pq;
 
 #### `string s; char y; s.find('y')`
 > Note: `size_t found = s.find('y')`; `found` is the first `'y'`'s index. If not exist, return `string::npos`;
+
 ```cpp
 string a = "123.45678";
 size_t found = a.find('.');
