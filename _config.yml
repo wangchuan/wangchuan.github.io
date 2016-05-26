@@ -5,7 +5,6 @@ description: >
   A blog.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://wangchuan.github.io" # the base hostname & protocol for your site
-twitter_username: wangchuan
 github_username:  wangchuan
 
 # Build settings
