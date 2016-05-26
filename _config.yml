@@ -8,7 +8,7 @@ url: "https://wangchuan.github.io" # the base hostname & protocol for your site
 github_username:  wangchuan
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 
 # Output settings
 permalink: none
