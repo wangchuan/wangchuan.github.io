@@ -18,16 +18,20 @@ public class HelloWorld
     }
 }
 ```
+
 1. Save the file as `HelloWorld.java`, note that the file name must be the same as the class name.
 2. Compile it: `javac HelloWorld.java`
 3. Run it: `java HelloWorld`, note here there is no extension for the 2nd parameter.
 
 #### A More Complex Example
 This example is from the LeetCode problem [Edit Distance](http://www.lintcode.com/en/problem/edit-distance/). See how to write it in Java.
+
 Note: 
+
 1. `boolean` and `int` cannot be directly cast. So we use `int x = (express) ? 0 : 1`;
 2. 2D array is like `int [][] dp = new int [m][n]`;
 3. If the method is not static, we must initialize a object to call it.
+
 ```java
 public class hw
 {
