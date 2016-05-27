@@ -31,38 +31,38 @@ Note:
 ```java
 public class hw
 {
-	private static int min3(int a, int b, int c)
-	{
-		return Math.min(a, Math.min(b, c));
-	}
+    private static int min3(int a, int b, int c)
+    {
+        return Math.min(a, Math.min(b, c));
+    }
     public int minDistance(String word1, String word2) 
     {
         int m = word1.length(), n = word2.length();
         int [][] dp = new int [m + 1][n + 1];
         for (int i = 0; i <= n; i++)
-        	dp[0][i] = i;
+            dp[0][i] = i;
         for (int i = 0; i <= m; i++)
-        	dp[i][0] = i;
-       	for (int i = 1; i <= m; i++)
-       	{
-       		for (int j = 1; j <= n; j++)
-       		{
-       			int flag = word1.charAt(i - 1) == word2.charAt(j - 1) ? 0 : 1;
-       			dp[i][j] = min3(dp[i - 1][j] + 1,
-       				dp[i][j - 1] + 1,
-       				dp[i - 1][j - 1] + flag);
-       		}
-       	}
+            dp[i][0] = i;
+        for (int i = 1; i <= m; i++)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                int flag = word1.charAt(i - 1) == word2.charAt(j - 1) ? 0 : 1;
+                dp[i][j] = min3(dp[i - 1][j] + 1,
+                    dp[i][j - 1] + 1,
+                    dp[i - 1][j - 1] + flag);
+            }
+        }
         return dp[m][n];
     }
 
     public static void main(String[] args)
     {
-    	String a = "mart";
-    	String b = "karma";
-    	hw obj = new hw();
-    	int x = obj.minDistance(a, b);
-    	System.out.println(x);
+        String a = "mart";
+        String b = "karma";
+        hw obj = new hw();
+        int x = obj.minDistance(a, b);
+        System.out.println(x);
     } 
 }
 ```
@@ -74,7 +74,7 @@ import java.util.*;
 
 public class hw
 {
-	public static void main(String[] args) throws FileNotFoundException
+    public static void main(String[] args) throws FileNotFoundException
     {
         String filename0 = "input.txt";
         String filename1 = "output.txt";

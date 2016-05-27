@@ -30,9 +30,9 @@ EXPNAME=$NOW
 COUNTER=0  
 while [  $COUNTER -lt 1000 ]; do  
     echo The counter is $COUNTER
-	NOW=$(date +"%Y-%m-%d_%H-%M-%S")
-	import -window root ~/Dropbox/LinuxScreen/screenshot$COUNTER-$NOW.jpg
-	sleep 600
+    NOW=$(date +"%Y-%m-%d_%H-%M-%S")
+    import -window root ~/Dropbox/LinuxScreen/screenshot$COUNTER-$NOW.jpg
+    sleep 600
     let COUNTER=COUNTER+1   
 done 
 ```
