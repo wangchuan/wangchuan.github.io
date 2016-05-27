@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Multisampling anti-aliasing offscreen rendering: Combining Frame Buffer Object \(FBO\) with Multisampling"
+title: "Multisampling anti-aliasing offscreen rendering: Combining Frame Buffer Object [(FBO)] with Multisampling"
 category: programming
 tags: [opengl, rendering]
 use_math: true
