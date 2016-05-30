@@ -1,9 +1,9 @@
 # This is the default format.
 # For more see: http://jekyllrb.com/docs/permalinks/
 
-# markdown: kramdown
+markdown: kramdown
 # markdown: maruku
-markdown: redcarpet
+# markdown: redcarpet
 redcarpet:
   extensions:
     - no_intra_emphasis
