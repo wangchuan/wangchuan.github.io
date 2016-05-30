@@ -1,22 +1,10 @@
 ---
 layout: post
-title: "Site Being Constructed, for Debug"
+title: "Multisampling anti-aliasing offscreen rendering: Combining Frame Buffer Object (FBO) with Multisampling"
 category: programming
-tags: [tag1, tag2]
+tags: [opengl, rendering]
 use_math: true
 ---
-
-## This is title
-
-This is equation.
-
-$$x^2 + y^2 = z$$
-
-Equation inline: (x^3 \dot y^3 = 2), $x^3 \dot y^3 = 2$
-
-```cpp
-vector<int> arr;
-```
 
 ### Frame Buffer Object without Multisampling
 0. Assume all the data we have defined in an array: 
@@ -194,5 +182,3 @@ The code is like this:
 	```
 
 After all these step down, you can get a multisampling rendered scene.
-
-
