@@ -1,8 +1,8 @@
 # This is the default format.
 # For more see: http://jekyllrb.com/docs/permalinks/
 
-markdown: kramdown
-# markdown: maruku
+# markdown: kramdown
+markdown: maruku
 # markdown: redcarpet
 redcarpet:
   extensions:
