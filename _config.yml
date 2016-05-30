@@ -27,6 +27,7 @@ exclude:
 
 # set pygments to true in order to support syntax highlight
 pygments: true
+pygments_options: ['lineanchors', 'linenos=table']
 
 # support the pagination
 paginate: 5
