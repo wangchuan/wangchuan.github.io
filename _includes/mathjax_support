@@ -62,7 +62,7 @@ The following is an example post:
       } 
     },
     tex2jax: {
-      inlineMath: [ ['$','$'], ['\(', '\)'] ],
+      inlineMath: [ ['$','$'] ],
       displayMath: [ ['$$','$$'] ],
       processEscapes: true,
     }
