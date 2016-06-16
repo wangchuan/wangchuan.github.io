@@ -13,6 +13,10 @@
   padding-top: 10px;
 }
 
+.post-title {
+	font-size: 10px;
+}
+
 .post > h3.title span.date {
   position: absolute;
   right: 0;
