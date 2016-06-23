@@ -1,3 +1,11 @@
+---
+layout: post
+title: "CMakeLists Examples"
+category: programming
+tags: [cmake, qt]
+use_math: true
+---
+
 Welcome to StackEdit!
 ===================
 
