@@ -1,10 +1,13 @@
 ---
 layout: post
-title: "LeetCode Test"
-categories: coding
-tags: [algorithm, test]
+title: "LeetCode Notes - 1"
+categories: hidden
+tags: leetcode
 use_math: true
 ---
+
+* TOC
+{:toc}
 
 ## LeetCode and LintCode Problems Summary
 
@@ -16,7 +19,7 @@ use_math: true
 
 ### DFS
 
-#### [Generate Parentheses](http://www.lintcode.com/en/problem/generate-parentheses/)
+#### <em class="icon-check"></em>  [Generate Parentheses](http://www.lintcode.com/en/problem/generate-parentheses/)
 Idea: Number of left parentheses and right parentheses as parameters separately into dfs function.
 ```cpp
 void dfs(int nleft, int nright, string& crtrst, vector<string>& finalrst)
@@ -46,7 +49,7 @@ vector<string> generateParenthesis(int n)
 }
 ```
 
-#### [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+#### <em class="icon-check"></em>  [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
 Idea 1: DFS each node, to compute the `minval` and `maxval` of the subtree rooted at this node. The condition is `v0 > lmax && v0 < rmin`
 Idea 2: Divide & Conquer: Use **ResultType** to return multiple values. In this problem, **ResultType** includes `isBST`, `minVal` and `maxVal`. The condition is that: both subtrees are BST, and `left's maxVal < root->val < right's minVal`
 ```cpp
@@ -106,12 +109,12 @@ bool isValidBST(TreeNode *root)
 }
 ```
 
-#### [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
+#### <em class="icon-check"></em>  [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
 Idea: DFS two nodes sharing the same father node. The condition is 
 1. two nodes NULL or
 2. two nodes have the same values and `left node's left == right node's right && left node's right == right node's left`
 
-#### [Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
+#### <em class="icon-check"></em>  [Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
 Idea: Use `crtnum`, `finalsum` to do the DFS. If the current node is a leaf node, add the `crtnum` to `finalsum`. Leaf node is the stop condition (**Leaf Node Stop Condition**), so must add `if (root->left)` or `if (root->right)` to the DFS function.
 ```cpp
 void dfs(TreeNode* root, int crtrst, int& finalrst)
@@ -138,7 +141,7 @@ int sumNumbers(TreeNode* root)
     return finalrst;
 }
 ```
-#### [Path Sum](https://leetcode.com/problems/path-sum/) (Classic) / [Path Sum II](https://leetcode.com/problems/path-sum-ii/)
+#### <em class="icon-check"></em>  [Path Sum](https://leetcode.com/problems/path-sum/) (Classic) / [Path Sum II](https://leetcode.com/problems/path-sum-ii/)
 Idea: Similar to [Sum Root to Leaf Numbers](sum-root-to-leaf-numbers), use **Leaf Node Stop Condition** to do DFS. For [Path Sum II](https://leetcode.com/problems/path-sum-ii/), we should carefully `push_back` and `pop_back` the current node before return. **DFS template will always be like this: `finalrst, crtrst, crtstatus, push_back(), pop_back()`**.
 ```cpp
 // Path Sum I
@@ -184,21 +187,21 @@ vector<vector<int>> pathSum(TreeNode* root, int sum)
 }
 ```
 
-#### [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
+#### <em class="icon-check"></em>  [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
 Idea: **Leaf Node Stop Condition**: if leaf node, then return `1`; else return `min(x1,x2)+1`; x1,x2 are minDepth of left and right subtree. 
 
-#### [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+#### <em class="icon-check"></em>  [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 Idea: very similar to [Minimum Depth of Binary Tree](nolink).
 
-#### [Same Tree](https://leetcode.com/problems/same-tree/) 
+#### <em class="icon-check"></em>  [Same Tree](https://leetcode.com/problems/same-tree/) 
 Idea: Very similar to [Symmetric Tree](nolink). The condition is
 1. two nodes NULL or
 2. two nodes have the same values and `left's left == right's left && left's right == right's right`
 
-#### [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+#### <em class="icon-check"></em>  [Number of Islands](https://leetcode.com/problems/number-of-islands/)
 Idea: traverse each pixel, if it's `1`, then `sum++` and set its neighbors `2`.
 
-#### [Flatten Binary Tree to Linked List](https://leetcode.com/submissions/detail/45641105/) (Hard)
+#### <em class="icon-check"></em>  [Flatten Binary Tree to Linked List](https://leetcode.com/submissions/detail/45641105/) (Hard)
 Idea: if current node is leaf, return itself. Otherwise, make its right points to its left, DFS on left, and return the last pointer. This pointer's right points to the original right. 
 ```cpp
 typedef pair<TreeNode*, TreeNode*> Node;
@@ -237,7 +240,7 @@ void flatten(TreeNode* root)
 }
 ```
 
-#### [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/) (Find the middle node of a linkedlist within a range)
+#### <em class="icon-check"></em>  [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/) (Find the middle node of a linkedlist within a range)
 Idea: Find the mid node `mid` of a range `[head,tail)` of a linked list, set `mid` as the root of the BST. Its left child is the DFS result of `[head,mid)`, and its right child is the DFS result of `[mid->next,tail)`.
 ```cpp
 // find the middle node of a linked list within range [p,q)
@@ -281,10 +284,10 @@ TreeNode* sortedListToBST(ListNode* head)
 }
 ```
 
-#### [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
+#### <em class="icon-check"></em>  [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
 Idea: very similar to [Convert Sorted List to Binary Search Tree](nolink). In array, we use `[s,e]` to represent a range, because computing `mid` can be `mid = s + (e-s)/2;`. And stop condition is **`if (e < s)`**.
 
-#### [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+#### <em class="icon-check"></em>  [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 Idea: The first element of preorder array is the root, find this element in inorder array, then we know the elements on the left of this element in the inorder array is the left subtree, and the elements on the right of this element in the inorder array is the right subtree. Note: `[s,e]` results in stop condition is `if (s > e)`
 ```cpp
 TreeNode* helper(vector<int>& P, int s1, int e1, vector<int>& I, int s2, int e2)
@@ -309,7 +312,7 @@ TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder)
 }
 ```
 
-#### [Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+#### <em class="icon-check"></em>  [Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 Idea: Very similar to [Construct Binary Tree from Preorder and Inorder Traversal](nolink).
 ```cpp
 TreeNode* helper(vector<int>& inorder, int s1, int e1, 
@@ -333,7 +336,7 @@ TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder)
     return helper(inorder, 0, n1 - 1, postorder, 0, n2 - 1);
 }
 ```
-#### [Clone Graph](https://leetcode.com/problems/clone-graph/) (Graph, Check Again!)
+#### <em class="icon-check"></em>  [Clone Graph](https://leetcode.com/problems/clone-graph/) (Graph, Check Again!)
 Idea: use `unordered_map<int,*> to store the cloned node`.
 ```cpp
 UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node) 
@@ -412,12 +415,12 @@ UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node)
    return hash[node];
 }
 ```
-#### [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/) (Classic)
+#### <em class="icon-check"></em>  [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/) (Classic)
 > **Summary**
 > 1. Leaf Node Stop condition
 > 2. If Processing is in current root, then restore it to its original value. (Note: Each branch needs restoration!)
 
-#### [House Robber III](https://leetcode.com/problems/house-robber-iii/)
+#### <em class="icon-check"></em>  [House Robber III](https://leetcode.com/problems/house-robber-iii/)
 Idea: Divide and Conquer. For each node, there are two results, selected `rst[1]` or not selected `rst[0]`.
 1. `rst[0] = max(leftrst[0], leftrst[1]) + max(rightrst[0], rightrst[1])`
 2. `rst[1] = root->val + leftrst[0] + rightrst[0]`.
@@ -440,7 +443,7 @@ int rob(TreeNode* root)
 }
 ```
 
-#### [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+#### <em class="icon-check"></em>  [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
 Idea: Divide and Conquer. Define two variables `isbalanced` and `depth` stored into a `struct`. And check whether `abs(lefttree's depth - righttree's depth) <= 1 && lefttree isbalanced && righttree isbalanced`.
 ```cpp
 class Node
@@ -473,7 +476,7 @@ bool isBalanced(TreeNode* root)
 ```
 
 
-#### [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) (Hard) (Check Again!)
+#### <em class="icon-check"></em>  [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) (Hard) (Check Again!)
 Idea: Define two variables, which are stored into a `struct` or `class`.
 1. The max path sum of a tree `maxPathSum`,
 2. The max path sum from root of a tree `maxRootPathSum`.
@@ -530,7 +533,7 @@ int maxPathSum(TreeNode* root)
 
 ### BFS
 
-#### [Populating Next Right Pointers in Each Node I / II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/) (Hard)
+#### <em class="icon-check"></em>  [Populating Next Right Pointers in Each Node I / II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/) (Hard)
 Idea: Level-order traversal, standard template. But O(n) space. So should solve it using level-order traversal + linked list.
 ```cpp
 void connect(TreeLinkNode *root) 
@@ -567,7 +570,7 @@ void connect(TreeLinkNode *root)
 }
 ```
 
-#### [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
+#### <em class="icon-check"></em>  [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
 Idea: 
 1. Standard Level-order traversal. This solution is trivial.
 2. DFS. Define the `maxDepth` the tree is traversed, and `crtDepth` at each node, if `crtDepth > maxDepth` then it means at `crtDepth`, this node is first visited. Of course, keep `root->right` before `root->left` traversed.
@@ -597,12 +600,12 @@ vector<int> rightSideView(TreeNode* root)
 }
 ```
 
-#### [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
+#### <em class="icon-check"></em>  [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
 Idea: BFS seems faster, while another solution is Union-Find.
 
 ### Backtracking / Search - Advanced (DFS / BFS)
 
-#### [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
+#### <em class="icon-check"></em>  [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
 Idea:
 1. Initialize the hash tables for row, col and block;
 2. There should be a flag indicating whether it's successful.
@@ -659,7 +662,7 @@ void solveSudoku(vector<vector<char>>& board)
 }
 ```
 
-#### [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) (Classic!!!)
+#### <em class="icon-check"></em>  [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) (Classic!!!)
 Idea: DFS string `s`: divide `s` into two substrings `s1`, `s2`. If `s1` is palindrome, then DFS `s2`. otherwise continue. 
 ```cpp
 void dfs(string& s, int start, vector<string>& crtrst, 
@@ -715,7 +718,7 @@ vector<vector<string>> partition(string s)
 }
 ```
 
-#### [Combinations](http://www.lintcode.com/en/problem/combinations/)
+#### <em class="icon-check"></em>  [Combinations](http://www.lintcode.com/en/problem/combinations/)
 Idea: For $C_n^k$, we use `k` to denote how many numbers have been added. Once `k == 0`, we push the `crtrst` into `finalrst`; 
 ```cpp
 void dfs(int s, int e, int k, vector<int>& crtrst, 
@@ -744,7 +747,7 @@ vector<vector<int>> combine(int n, int k)
 }
 ```
 
-#### [Combination Sum](https://leetcode.com/problems/combination-sum/) / [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) / [Combination Sum III](https://leetcode.com/problems/combination-sum-iii/) (Classic!!!)
+#### <em class="icon-check"></em>  [Combination Sum](https://leetcode.com/problems/combination-sum/) / [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) / [Combination Sum III](https://leetcode.com/problems/combination-sum-iii/) (Classic!!!)
 Idea: DFS Template
 > DFS: define a `crtrst`, `finalrst`. The stop condition is when the condition satisfied, `crtrst` will be added to `finalrst`.
 

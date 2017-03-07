@@ -20,13 +20,16 @@ lang: zh
 <!-- recent posts -->
 <div id="recent-posts" class="recent-posts">
   {% for this_post in paginator.posts %}
+  {% unless this_post.categories contains "hidden" %}
   <div class="post">
       <a href="{{ this_post.url }}">
-        <h2 class="post-title">{{ this_post.title }}</h2>
+        <p class="post-title" style="font-size:20px; font-family:Helvetica Neue; font-weight: 400;">{{ this_post.title }}
+        </p>
       </a>
       {% include category_info %}
       {% include source_info %}
   </div>
+  {% endunless %}
   {% endfor %}
 </div>
 <script type="text/javascript">
@@ -64,4 +67,10 @@ lang: zh
     </li>
     {% endif %}
   </ul>
+</div>
+
+<div>
+<a href="/archive/notes/index.html">
+<img align="right" border="0" alt="W3Schools" src="http://wangchuan.github.io/img/favicon.ico" width="10" height="10">
+</a>
 </div>

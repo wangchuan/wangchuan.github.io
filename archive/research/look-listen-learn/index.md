@@ -12,7 +12,7 @@ lang: zh
 
 <link rel="stylesheet" href="/glyphicons/css/glyphicons.css">
 
-<h1 style="text-align:center;">Look, Listen and Learn - A Multimodal LSTM for Speaker Identiﬁcation</h1>
+<h1 style="text-align:center;">Look, Listen and Learn - A Multimodal LSTM for Speaker Identification</h1>
 
 ---
 
@@ -83,7 +83,7 @@ lang: zh
 ### Bibtex
 ```bibtex
 @inproceedings{ren2016look,
-  title={{Look, Listen and Learn - A Multimodal LSTM for Speaker Identification}},
+  title={Look, Listen and Learn - A Multimodal LSTM for Speaker Identification},
   author={Ren, Jimmy SJ. and Hu, Yongtao and Tai, Yu-Wing and Wang, Chuan and Xu, Li and Sun, Wenxiu and Yan, Qiong},
   booktitle={Proceedings of the 30th AAAI Conference on Artificial Intelligence},
   pages={3581--3587},
