@@ -153,42 +153,42 @@ Or topological sort in DFS.
 ```cpp
 bool dfs(int i, vector<vector<int>>& relations, vector<int>& rst, vector<int>& status)
 {
-	if (status[i] == 2)
-		return true;
-	if (status[i] == 1)
-		return false;
-	status[i] = 1;
-	for (int j = 0; j < relations[i].size(); j++)
-	{
-		bool x = dfs(relations[i][j], relations, rst, status);
-		if (!x)
-			return false;
-	}
-	rst.push_back(i);
-	status[i] = 2;
-	return true;
+    if (status[i] == 2)
+        return true;
+    if (status[i] == 1)
+        return false;
+    status[i] = 1;
+    for (int j = 0; j < relations[i].size(); j++)
+    {
+        bool x = dfs(relations[i][j], relations, rst, status);
+        if (!x)
+            return false;
+    }
+    rst.push_back(i);
+    status[i] = 2;
+    return true;
 }
 vector<int> findOrder(int numCourses, vector<pair<int, int>>& prerequisites) 
 {
-	vector<vector<int>> relations(numCourses);
-	for (int i = 0; i < prerequisites.size(); i++)
-	{
-		int to = prerequisites[i].first;
-		int from = prerequisites[i].second;
-		relations[from].push_back(to);
-	}
-	vector<int> rst;
-	vector<int> status(numCourses, 0);
-	bool x = true;
-	for (int i = 0; i < numCourses && x; i++)
-	{
-		x = dfs(i, relations, rst, status);
-	}
-	if (x)
-		reverse(rst.begin(), rst.end());
-	else
-		rst.clear();
-	return rst;
+    vector<vector<int>> relations(numCourses);
+    for (int i = 0; i < prerequisites.size(); i++)
+    {
+        int to = prerequisites[i].first;
+        int from = prerequisites[i].second;
+        relations[from].push_back(to);
+    }
+    vector<int> rst;
+    vector<int> status(numCourses, 0);
+    bool x = true;
+    for (int i = 0; i < numCourses && x; i++)
+    {
+        x = dfs(i, relations, rst, status);
+    }
+    if (x)
+        reverse(rst.begin(), rst.end());
+    else
+        rst.clear();
+    return rst;
 }
 ```
 
