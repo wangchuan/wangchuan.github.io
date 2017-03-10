@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Multisampling Anti-aliasing Offscreen Rendering"
-category: coding
+categories: coding
 tags: [opengl, rendering]
 use_math: true
 ---

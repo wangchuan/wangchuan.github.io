@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 categories: research
-tags: [jekyll, leetcode, index]
+tags: [jekyll, leetcode, index, special]
 use_math: true
 ---
 

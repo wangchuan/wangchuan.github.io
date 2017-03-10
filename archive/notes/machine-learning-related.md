@@ -13,7 +13,7 @@ use_math: true
 
 ### Accuracy (准确率), Precision (精确率), Recall (召回率)
 <div align="center">
-	<img style="height: 150px" src="./archive/notes/measure-classifier.jpg"></img> <img style="height: 150px" src="./archive/notes/measure-table.jpg"></img>
+	<img style="height: 150px" src="./measure-classifier.jpg"></img> <img style="height: 150px" src="./measure-table.jpg"></img>
 </div>
 $
 \begin{align}
@@ -26,6 +26,7 @@ $
 
 #### Accurary
 Normally in our model testing, we use accuracy to measure the performance of the model. It calculates the "correctness" of the model.
+
 $$ \text{Accuracy} = \text{Correctness} = \frac{TP + TN}{\text{All}} = \frac{TP + TN}{TP + TN + FP + FN} $$
 
 #### Precision
@@ -85,7 +86,7 @@ Saying you need to build a model to recognize birds out of animals. You have a d
 Now if you model only contains a parameter about feather, it will result in that the model cannot well distinguish birds from chickens. So two few parameters may cause the model too simple to fit the dataset.
 
 <div align="center">
-	<img width="90%" src="./archive/notes/overfitting.png"/>
+	<img width="90%" src="./overfitting.png"/>
 </div>
 
 ---
