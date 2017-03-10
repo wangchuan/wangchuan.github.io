@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "LeetCode Notes"
+title: "Notes"
 categories: hidden
 tags: index
 use_math: true
@@ -14,7 +14,7 @@ use_math: true
 <p style="padding-top: 10px"/>
 <div id="recent-posts" class="recent-posts">
   {% for this_post in site.html_pages %}
-  {% if this_post.categories == "hidden" and this_post.tags == "leetcode" %}
+  {% if this_post.categories == "hidden" and this_post.tags == "special" %}
   <a href="{{ this_post.url }}">
         <p class="post-title" style="font-size:18px; padding-top: 3px;font-family:Helvetica Neue; font-weight: 400;">{{ this_post.title }}
         </p>

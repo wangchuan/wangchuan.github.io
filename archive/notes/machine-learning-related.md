@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Machine Learning Releated Concepts"
-category: research
-tags: [machine learning]
+category: hidden
+tags: [special]
 use_math: true
 ---
 
@@ -13,7 +13,7 @@ use_math: true
 
 ### Accuracy (准确率), Precision (精确率), Recall (召回率)
 <div align="center">
-	<img style="height: 150px" src="_posts/measure-classifier.jpg"></img> <img style="height: 150px" src="_posts/measure-table.jpg"></img>
+	<img style="height: 150px" src="./archive/notes/measure-classifier.jpg"></img> <img style="height: 150px" src="./archive/notes/measure-table.jpg"></img>
 </div>
 $
 \begin{align}
@@ -85,7 +85,7 @@ Saying you need to build a model to recognize birds out of animals. You have a d
 Now if you model only contains a parameter about feather, it will result in that the model cannot well distinguish birds from chickens. So two few parameters may cause the model too simple to fit the dataset.
 
 <div align="center">
-	<img width="90%" src="_posts/overfitting.png"/>
+	<img width="90%" src="./archive/notes/overfitting.png"/>
 </div>
 
 ---
