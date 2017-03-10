@@ -2,7 +2,7 @@
 layout: post
 title: "LeetCode Notes - 1"
 categories: hidden
-tags: leetcode
+tags: special
 use_math: true
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "LeetCode Notes for Amazon"
 categories: hidden
-tags: leetcode
+tags: special
 use_math: true
 ---
 

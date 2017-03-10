@@ -2,7 +2,7 @@
 layout: post
 title: "Machine Learning Releated Concepts"
 category: hidden
-tags: [special]
+tags: special
 use_math: true
 ---
 
