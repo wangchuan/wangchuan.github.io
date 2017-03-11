@@ -35,6 +35,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+kramdown:
+  input: GFM
 
 menuitems:
     - { title:    Projects,

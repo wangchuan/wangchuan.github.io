@@ -6,6 +6,7 @@ tags: special
 use_math: true
 ---
 
+
 * TOC
 {:toc}
 
@@ -295,7 +296,7 @@ RandomListNode *copyRandomList(RandomListNode *head)
 Given a list of Connections, which is the Connection class (the city name at both ends of the edge and a cost between them), find some edges, connect all the cities and spend the least amount. Return the connects if can connect all the cities, otherwise return empty list. 
 
 Example 
-Gievn the connections = `["Acity","Bcity",1], ["Acity","Ccity",2], ["Bcity","Ccity",3]`
+Given the connections = `["Acity","Bcity",1], ["Acity","Ccity",2], ["Bcity","Ccity",3]`
 Return `["Acity","Bcity",1]`, `["Acity","Ccity",2]`
 
 Idea: Kruskal Algorithm:
@@ -357,3 +358,317 @@ vector<Connection> lowestCost(vector<Connection>& connections)
     return rst;
 }
 ```
+
+---
+
+## More Problems in LeetCode
+
+### <em class="icon-check"></em> [H-Index](https://leetcode.com/problems/h-index/?tab=Description)
+Idea: Hash Table. `n` publications, we create a hashtable `hash` of size `n + 1`. `hash[i]` records how many publications of citation `i`. For `hash[n]`, it records how many publications of citations `>= i`. Accumulate `hash` and get the result.
+```cpp
+int hIndex(vector<int>& citations) 
+{
+    int n = citations.size();
+    vector<int> hash(n + 1, 0);
+    for (int i = 0; i < n; i++)
+    {
+        int c = citations[i];
+        c = min(c, n);
+        hash[c]++;
+    }
+    if (hash[n] >= n)
+        return n;
+    for (int i = n - 1; i >= 0; i--)
+    {
+        hash[i] += hash[i + 1];
+        if (hash[i] >= i)
+            return i;
+    }
+    return 0;
+}
+```
+
+### <em class="icon-check"></em> [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/?tab=Description)
+Idea: Notice for `startWith` function, after finishing traversing the `prefix`, we need to check whether the current pointer: has `children` or itself contains word.
+```cpp
+class Trie {
+    class TrieNode
+    {
+    public:
+        TrieNode* children[26] = {NULL};
+        int count = 0;
+    };
+public:
+    /** Initialize your data structure here. */
+    Trie() {
+        root = new TrieNode();
+    }
+    
+    /** Inserts a word into the trie. */
+    void insert(string word) {
+        int n = word.size();
+        TrieNode *p = root;
+        for (int i = 0; i < n; i++)
+        {
+            int id = word[i] - 'a';
+            if (p->children[id] == NULL)
+                p->children[id] = new TrieNode();
+            p = p->children[id];
+        }
+        p->count++;
+    }
+    
+    /** Returns if the word is in the trie. */
+    bool search(string word) {
+        int n = word.size();
+        TrieNode* p = root;
+        for (int i = 0; i < n; i++)
+        {
+            int id = word[i] - 'a';
+            if (p->children[id] == NULL)
+                return false;
+            p = p->children[id];
+        }
+        return p->count;
+    }
+    
+    /** Returns if there is any word in the trie that starts with the given prefix. */
+    bool startsWith(string prefix) {
+        int n = prefix.size();
+        TrieNode* p = root;
+        for (int i = 0; i < n; i++)
+        {
+            int id = prefix[i] - 'a';
+            if (p->children[id] == NULL)
+                return false;
+            p = p->children[id];
+        }
+        for (int i = 0; i < 26; i++)
+            if (p->children[i])
+                return true;
+        return p->count;
+    }
+    
+    TrieNode* root;
+};
+```
+
+### <em class="icon-check"></em> [3Sum](https://leetcode.com/problems/3sum/?tab=Description)
+Idea: Sort, and fix the first one, apply 2Sum to the rest. `O(n^2)`
+```cpp
+vector<vector<int>> threeSum(vector<int>& nums) 
+{
+    int n = nums.size();
+    sort(nums.begin(), nums.end());
+    vector<vector<int>> rst;
+    for (int i = 0; i < n - 2; i++)
+    {
+        if (i > 0 && nums[i] == nums[i - 1])
+            continue;
+        int s = i + 1, e = n - 1;
+        while (s < e)
+        {
+            if (nums[s] + nums[e] < -nums[i])
+                s++;
+            else if (nums[s] + nums[e] > -nums[i])
+                e--;
+            else
+            {
+                rst.push_back({nums[i], nums[s], nums[e]});
+                int temp1 = nums[s], temp2 = nums[e];
+                while (s < e && nums[s] == temp1) s++;
+                while (s < e && nums[e] == temp2) e--;
+            }
+        }
+    }
+    return rst;
+}
+```
+
+### <em class="icon-check"></em> [3Sum Closest](https://leetcode.com/problems/3sum-closest/?tab=Description)
+Idea: Similar to 3Sum. 
+```cpp
+int threeSumClosest(vector<int>& nums, int target) 
+{
+    int n = nums.size();
+    sort(nums.begin(), nums.end());
+    int mindist = INT_MAX, rst, dist;
+    for (int i = 0; i < n; i++)
+    {
+        if (i > 0 && nums[i] == nums[i - 1])
+            continue;
+        int s = i + 1, e = n - 1;
+        int first = nums[i], tar = target - first;
+        while (s < e)
+        {
+            int sum = nums[s] + nums[e];
+            if (sum == tar)
+                return target;
+            dist = abs(first + sum - target);
+            rst = dist < mindist ? first + sum : rst;
+            mindist = min(dist, mindist);
+            if (sum < tar)
+                s++;
+            else
+                e--;
+        }
+    }
+    return rst;
+}
+```
+
+### <em class="icon-check"></em> [String to Integer (atoi) <em class="icon-thumbs-up"></em>](https://leetcode.com/problems/string-to-integer-atoi/?tab=Description) 
+Idea: 
+
+1. Find the first non-white-space character, if no such one, then return `0`.
+2. Check the first non-white-space character, if it's `+` or `-`, then record its sign.
+3. Traverse each character, if found non-digit, break the loop; otherwise, update the result.
+    Note that, when update, if found current value is `> INT_MAX / 10`, which means the result must be out-of-range regardless of sign; Similarly, if foudn current value is `= INT_MAX / 10` and incoming value is `>= 8`, then the result must be out-of-range regardless of sign too.
+
+```cpp
+int myAtoi(string str) 
+{
+    int pos = str.find_first_not_of(' ');
+    if (pos == string::npos)
+        return 0;
+    int sign = 1;
+    if (str[pos] == '-' || str[pos] == '+')
+        sign = 1 - 2 * (str[pos++] == '-');
+    int rst = 0;
+    int n = str.size();
+    for (int i = pos; i < n && str[i] != ' '; i++)
+    {
+        if (str[i] > '9' || str[i] < '0')
+            break;
+        int x = str[i] - '0';
+        if (rst > INT_MAX / 10 || (rst == INT_MAX / 10 && x > 7))
+        {
+            return sign == 1 ? INT_MAX : INT_MIN;
+        }
+        rst = rst * 10 + x;
+    }
+    rst *= sign;
+    return rst;
+}
+```
+
+### <em class="icon-check"></em> [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/?tab=Description)
+Idea: Find the different steps of two pointers.
+```cpp
+ListNode *shift(ListNode* p, ListNode* head)
+{
+    ListNode *p0;
+    if (p)
+    {
+        p0 = head;
+        while (p)
+        {
+            p = p->next;
+            p0 = p0->next;
+        }
+        p = p0;
+    }
+    else
+        p = head;
+    return p;
+}
+ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) 
+{
+    ListNode *p1 = headA, *p2 = headB, *p;
+    while (p1 && p2)
+    {
+        p1 = p1->next;
+        p2 = p2->next;
+    }
+    p1 = shift(p1, headA);
+    p2 = shift(p2, headB);
+    while (p1 && p2 && p1 != p2)
+    {
+        p1 = p1->next;
+        p2 = p2->next;
+    }
+    return p1;
+}
+```
+
+### <em class="icon-check"></em> [Reverse Integer](https://leetcode.com/problems/reverse-integer/?tab=Description)
+Idea: Note that `2147483647` would be reversed to `7463847421`, overflow. So we need to use `long long`. Use `llabs` instead of `abs` for `long long`.
+```cpp
+int reverse(int x) 
+{
+    int sign = x > 0 ? 1 : -1;
+    long long llx = x;
+    llx = llabs(llx);
+    long long rst = 0;
+    while (llx)
+    {
+        int y = llx % 10;
+        llx /= 10;
+        rst = rst * 10 + y;
+        if (rst * sign > INT_MAX || rst * sign < INT_MIN)
+            return 0;
+    }
+    return rst * sign;
+}
+```
+
+### <em class="icon-check"></em> [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/?tab=Description)
+Idea: Clearup the redundant whitespaces in a string. Then add a dummy whitespace at the end. Now the string looks like `abcd␣efg␣hi␣jklmn␣`. Then reverse each words to `dcba␣gfe␣ih␣nmlkj␣`. Pop-back the string, and reverse the whole string.
+```cpp
+void sortout(string& s)
+{
+    int n = s.size();
+    int i = 0, j = 0;
+    while (j < n)
+    {
+        if (s[j] != ' ' || j > 0 && s[j - 1] != ' ' && s[j] == ' ')
+            s[i++] = s[j++];
+        else
+            j++;
+    }
+    s.resize(i);
+    if (!s.empty() && s.back() != ' ')
+        s.push_back(' ');
+}
+void reverseWords(string &s) 
+{
+    sortout(s);
+    if (s.empty())
+        return;
+    int prev = 0;
+    while (prev < s.size())
+    {
+        int pos = s.find(' ', prev);
+        reverse(s.begin() + prev, s.begin() + pos);
+        prev = pos + 1;
+    }
+    s.pop_back();
+    reverse(s.begin(), s.end());
+}
+```
+
+### <em class="icon-check"></em> [Pow(x, n) <em class="icon-thumbs-up"></em>](https://leetcode.com/problems/powx-n/?tab=Description)
+Idea: `n` could be `INT_MAX` or `INT_MIN`, so we need to use `long long`.
+```cpp
+double myPow(double x, int n) 
+{
+    if (fabs(x) < 1e-7)
+        return 0;
+    if (n == 0)
+        return 1;
+    int sign = n > 0 ? 1 : -1;
+    long long lln = abs((long long)n);
+    double rst = 1.0;
+    while (lln)
+    {
+        int a = (lln & 1);
+        if (a == 1)
+            rst *= x;
+        x *= x;
+        lln >>= 1;
+    }
+    return sign == 1 ? rst : 1.0 / rst;
+}
+```
+
+---
