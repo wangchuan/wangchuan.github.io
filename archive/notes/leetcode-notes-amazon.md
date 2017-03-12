@@ -29,7 +29,7 @@ public:
     RT() : root(NULL), Sum(0), maxSum(INT_MIN);
     int maxSum, Sum;
     TreeNode* root;
-}
+};
 inline int max3(int a, int b, int c) { return max(a, max(b, c)); }
 RT helper(TreeNode* root)
 {
@@ -323,6 +323,16 @@ struct TComp
         return a.city2 < b.city2;
     }
 };
+int find(int id, vector<int>& father)
+{
+    int fa = father[id];
+    while (fa != id)
+    {
+        id = fa;
+        fa = father[id];
+    }
+    return id;
+}
 vector<Connection> lowestCost(vector<Connection>& connections)
 {
     TComp TCompObj;
