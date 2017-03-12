@@ -705,4 +705,27 @@ ListNode* swapPairs(ListNode* head)
 }
 ```
 
+### <em class="icon-check"></em> [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/?tab=Description)
+Idea: Count the number of elements of its left children `n1`. Compare `k` with `n1`.
+```cpp
+int nElements(TreeNode* root)
+{
+    if (root == NULL)
+        return 0;
+    return nElements(root->left) + nElements(root->right) + 1;
+}
+int kthSmallest(TreeNode* root, int k) 
+{
+    if (root == NULL)
+        return 0;
+    int n1 = nElements(root->left);
+    if (k == n1 + 1)
+        return root->val;
+    else if (k < n1 + 1)
+        return kthSmallest(root->left, k);
+    else
+        return kthSmallest(root->right, k - n1 - 1);
+}
+```
+
 ---
