@@ -27,7 +27,7 @@ lang: zh
 **CAPTCHA Cracking: A CNN Based OCR Module for Web Crawler.**
 - Extended single-label classification to multi-label classification in CNN, and applied it into text recognition in a single image as CAPTCHA.
 - An end-to-end solution which avoids image segmentation for a single character.
-- Dugmented synthesized data, to avoid overfitting when model applied to real data.
+- Augmented synthesized data, to avoid overfitting when model applied to real data.
 
 || <em class="icon-home"/> || project page ||
 

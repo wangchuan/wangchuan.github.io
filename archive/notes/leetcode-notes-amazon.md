@@ -681,4 +681,28 @@ double myPow(double x, int n)
 }
 ```
 
+### <em class="icon-check"></em> [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/?tab=Description)
+Idea: record `prev, p1, p2, q` four pointers.
+```cpp
+ListNode* swapPairs(ListNode* head) 
+{
+    if (head == NULL || head->next == NULL)
+        return head;
+    ListNode dummy(0);
+    dummy.next = head;
+    ListNode *prev = &dummy, *p1 = head, *p2 = head->next, *q;
+    while (p1 && p2)
+    {
+        q = p2->next;
+        prev->next = p2;
+        p2->next = p1;
+        p1->next = q;
+        prev = p1;
+        p1 = q;
+        p2 = p1 ? p1->next : p1;
+    }
+    return dummy.next;
+}
+```
+
 ---
