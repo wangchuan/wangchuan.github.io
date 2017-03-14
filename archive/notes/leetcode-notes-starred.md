@@ -133,7 +133,7 @@ void solve(vector<vector<char>>& board)
         {
             if (board[i][j] == 'X')
                 continue;
-            int offset[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+            int offset[4][2] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };
             for (int k = 0; k < 4; k++)
             {
                 int ii = i + offset[k][0];
