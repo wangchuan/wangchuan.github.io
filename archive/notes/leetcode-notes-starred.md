@@ -88,6 +88,7 @@ void solve(vector<vector<char>>& board)
 ```
 
 Or Union Find:
+
 ```cpp
 int find(vector<int>& father, int id)
 {
