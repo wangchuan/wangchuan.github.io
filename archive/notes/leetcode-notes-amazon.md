@@ -6,7 +6,6 @@ tags: special
 use_math: true
 ---
 
-
 * TOC
 {:toc}
 
@@ -727,5 +726,339 @@ int kthSmallest(TreeNode* root, int k)
         return kthSmallest(root->right, k - n1 - 1);
 }
 ```
+
+### <em class="icon-check"></em> [Move Zeroes](https://leetcode.com/problems/move-zeroes/#/description)
+Idea: two pointers.
+```cpp
+void moveZeroes(vector<int>& nums) 
+{
+    int n = nums.size();
+    int i = 0, j = 0;
+    while (j < n)
+    {
+        if (nums[j] != 0)
+            swap(nums[i++], nums[j++]);
+        else
+            j++;
+    }
+}
+```
+
+### <em class="icon-check"></em> [Two Sum](https://leetcode.com/problems/two-sum/#/description)
+Idea: hash map.
+```cpp
+vector<int> twoSum(vector<int>& nums, int target) 
+{
+    unordered_map<int, int> map;
+    int n = nums.size();
+    vector<int> rst(2, -1);
+    for (int i = 0; i < n; i++)
+    {
+        auto it = map.find(target - nums[i]);
+        if (it != map.end())
+        {
+            rst[0] = it->second;
+            rst[1] = i;
+            return rst;
+        }
+        map.insert({nums[i], i});
+    }
+    return rst;
+}
+```
+
+### <em class="icon-check"></em> [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/#/description)
+Idea: record `minval` up to now.
+```cpp
+int maxProfit(vector<int>& prices) 
+{
+    int n = prices.size();
+    if (n <= 1)
+        return 0;
+    int minval = prices[0], maxdiff = 0;
+    for (int i = 1; i < n; i++)
+    {
+        maxdiff = max(maxdiff, prices[i] - minval);
+        minval = min(minval, prices[i]);
+    }
+    return maxdiff;
+}
+```
+
+### <em class="icon-check"></em> [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/#/description)
+Idea: Note to check `carry` at the end.
+```cpp
+ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) 
+{
+    ListNode *p1 = l1, *p2 = l2;
+    if (l1 == NULL || l2 == NULL)
+        return l1 ? l1 : l2;
+    int carry = 0;
+    ListNode dummy(0);
+    ListNode *p, *prev = &dummy;
+    while (p1 || p2)
+    {
+        int n1 = p1 ? p1->val : 0;
+        int n2 = p2 ? p2->val : 0;
+        int sum = n1 + n2 + carry;
+        prev->next = new ListNode(sum % 10);
+        prev = prev->next;
+        carry = sum / 10;
+        p1 = p1 ? p1->next : p1;
+        p2 = p2 ? p2->next : p2;
+    }
+    if (carry)
+        prev->next = new ListNode(carry);
+    return dummy.next;
+}
+```
+
+### <em class="icon-check"></em> [Min Stack](https://leetcode.com/problems/min-stack/#/description)
+Idea: two stacks.
+```cpp
+class MinStack {
+public:
+    /** initialize your data structure here. */
+    MinStack() {
+        
+    }
+    
+    void push(int x) {
+        S1.push(x);
+        if (S2.empty() || S2.top() >= x)
+            S2.push(x);
+    }
+    
+    void pop() {
+        if (S1.empty())
+            return;
+        int x1 = S1.top(), x2 = S2.top();
+        S1.pop();
+        if (x1 <= x2)
+            S2.pop();
+    }
+    
+    int top() {
+        return S1.top();
+    }
+    
+    int getMin() {
+        return S2.top();
+    }
+    
+    stack<int> S1, S2;
+};
+```
+
+### <em class="icon-check"></em> [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/#/description)
+Idea: Divide and Conquer. Return a structure to store multiple information.
+```cpp
+class RT
+{
+public:
+    RT(int x1, int x2, bool x3) : minval(x1), maxval(x2), isValid(x3) {}
+    int minval, maxval;
+    bool isValid;
+};
+inline int min3(int a, int b, int c) { return min(a, min(b, c)); }
+inline int max3(int a, int b, int c) { return max(a, max(b, c)); }
+RT helper(TreeNode* root)
+{
+    if (!root->left && !root->right)
+        return RT(root->val, root->val, true);
+    else if (root->left && root->right)
+    {
+        RT left = helper(root->left);
+        RT right = helper(root->right);
+        return RT(min3(left.minval, right.minval, root->val), max3(left.maxval, right.maxval, root->val), 
+            left.maxval < root->val && root->val < right.minval && left.isValid && right.isValid);
+    }
+    else if (root->left)
+    {
+        RT left = helper(root->left);
+        return RT(min(root->val, left.minval), max(root->val, left.maxval), left.maxval < root->val && left.isValid);
+    }
+    else
+    {
+        RT right = helper(root->right);
+        return RT(min(root->val, right.minval), max(root->val, right.maxval), root->val < right.minval && right.isValid);
+    }
+    return RT(-1,-1,false);
+}
+bool isValidBST(TreeNode* root) 
+{
+    if (root == NULL)
+        return true;
+    RT rst = helper(root);
+    return rst.isValid;
+}
+``` 
+
+### <em class="icon-check"></em> [Longest Substring Without Repeating Characters <em class="icon-thumbs-up"></em>](https://leetcode.com/problems/longest-substring-without-repeating-characters/#/description) 
+Idea: two pointers.
+```cpp
+int lengthOfLongestSubstring(string s) 
+{
+    int n = s.size();
+    int hash[256] = {0};
+    int i = 0, j = 0, maxlen = 0;
+    while (j < n)
+    {
+        while (j < n && hash[s[j]] == 0)
+        {
+            hash[s[j]] = 1;
+            j++;
+            maxlen = max(maxlen, j - i);
+        }
+        while (i < j && hash[s[j]] == 1)
+        {
+            hash[s[i]] = 0;
+            i++;
+        }
+    }
+    return maxlen;
+}
+```
+
+### <em class="icon-check"></em> [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/#/description) 
+Idea: Quick sort. Partition to find the pivot index, then check the index we are seeking with the pivot index.
+```cpp
+int partition(vector<int>& nums, int s, int e)
+{
+    if (s > e)
+        return s;
+    int pivot = nums[e];
+    int i = s, j = e;
+    while (i <= j)
+    {
+        while (i <= j && nums[i] < pivot) i++;
+        while (i <= j && nums[j] >= pivot) j--;
+        if (i <= j)
+        {
+            swap(nums[i], nums[j]);
+        }
+    }
+    swap(nums[e], nums[i]); // here swap(nums[e], nums[j]) is incorrect!!!
+    return i;
+}
+int findKth(vector<int>& nums, int s, int e, int index)
+{
+    int mid = partition(nums, s, e);
+    if (index == mid)
+        return nums[mid];
+    else if (index < mid)
+        return findKth(nums, s, mid - 1, index);
+    else
+        return findKth(nums, mid + 1, e, index);
+}
+int findKthLargest(vector<int>& nums, int k) 
+{
+    int n = nums.size();
+    random_shuffle(nums.begin(), nums.end());
+    return findKth(nums, 0, n - 1, n - k);
+}
+```
+
+### <em class="icon-check"></em> [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/#/description)
+Idea: two pointers.
+```cpp
+void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) 
+{
+    int i = m - 1, j = n - 1, k = m + n - 1;
+    while (i >= 0 && j >= 0)
+    {
+        if (nums1[i] >= nums2[j])
+            nums1[k--] = nums1[i--];
+        else
+            nums1[k--] = nums2[j--];
+    }
+    while (j >= 0)
+        nums1[k--] = nums2[j--];
+}
+```
+
+### <em class="icon-check"></em> [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/#/description)
+Idea: two pointers.
+```cpp
+bool hasCycle(ListNode *head) 
+{
+    if (head == NULL)
+        return false;
+    ListNode *p = head, *q = head->next;
+    while (p && q && q->next && p != q)
+    {
+        p = p->next;
+        q = q->next->next;
+    }
+    return p == q;
+}
+```
+
+### <em class="icon-check"></em> [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/#/description)
+Idea: stack. Note to check stack empty or not at the end.
+```cpp
+bool isValid(string s) 
+{
+    stack<char> S;
+    char map[256] = {0};
+    map[')'] = '(';
+    map[']'] = '[';
+    map['}'] = '{';
+    for (int i = 0; i < s.size(); i++)
+    {
+        if (s[i] == '(' || s[i] == '[' || s[i] == '{')
+            S.push(s[i]);
+        else
+        {
+            if (S.empty() || S.top() != map[s[i]])
+                return false;
+            else
+                S.pop();
+        }
+    }
+    return S.empty();
+}
+```
+
+### <em class="icon-check"></em> [Merge Intervals](https://leetcode.com/problems/merge-intervals/#/description)
+Idea: sort and check the tail.
+```cpp
+vector<Interval> merge(vector<Interval>& intervals) 
+{
+    sort(intervals.begin(), intervals.end(), [](Interval& a, Interval& b){ return a.start < b.start; });
+    vector<Interval> rst;
+    for (int i = 0; i < intervals.size(); i++)
+    {
+        if (rst.empty() || rst.back().end < intervals[i].start)
+            rst.push_back(intervals[i]);
+        else
+            rst.back().end = max(rst.back().end, intervals[i].end);
+    }
+    return rst;
+}
+```
+
+### <em class="icon-check"></em> [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/#/description)
+Idea: two pointers.
+```cpp
+int removeDuplicates(vector<int>& nums) 
+{
+    int n = nums.size();
+    int i = 0, j = 0;
+    while (j < n)
+    {
+        if (j > 0 && nums[j] == nums[j - 1])
+            j++;
+        else
+            nums[i++] = nums[j++];
+    }
+    nums.resize(i);
+    return i;
+}
+```
+
+
+
+
 
 ---
