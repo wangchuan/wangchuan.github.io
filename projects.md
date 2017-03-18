@@ -24,12 +24,12 @@ lang: zh
 </td>
 <td></td>
 <td markdown="1">
-**CAPTCHA Cracking: A CNN Based OCR Module for Web Crawler.**
+[**CAPTCHA Cracking: A CNN Based OCR Module for Web Crawler.**](/archive/projects/captcha-crack)
 - Extended single-label classification to multi-label classification in CNN, and applied it into text recognition in a single image as CAPTCHA.
 - An end-to-end solution which avoids image segmentation for a single character.
 - Augmented synthesized data, to avoid overfitting when model applied to real data.
 
-|| <em class="icon-home"/> || project page ||
+|| <em class="icon-home"/> || [project page](/archive/projects/captcha-crack) ||
 
 </td> 
 </tr>

@@ -46,8 +46,8 @@ lang: zh
 
 ### Video Demo
 
-<p style="margin-bottom: 30px; text-align:center;">
-<iframe width="854" height="480" src="https://www.youtube.com/embed/8gFGsBY3rzg" frameborder="0" allowfullscreen></iframe>
+<p style="margin-bottom: 30px; text-align:center; width=100%;">
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/8gFGsBY3rzg" frameborder="0" allowfullscreen></iframe>
 </p>
 
 ---
