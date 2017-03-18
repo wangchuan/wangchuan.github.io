@@ -42,7 +42,7 @@ lang: zh
 </td>
 <td></td>
 <td markdown="1">
-**3D Camera: RGBD Image Algorithms for Dual-camera Mobile Phone, Lenovo VIBE S1.**
+[**3D Camera: RGBD Image Algorithms for Dual-camera Mobile Phone, Lenovo VIBE S1.**](/archive/projects/3d-camera)
 1. Image Refocus
 - Developed an image refocus algorithm which utilizes the depth information to blur the image to simulate an
 effect of "large aperture, shallow depth of field".
@@ -51,7 +51,7 @@ effect of "large aperture, shallow depth of field".
 - Co-developed an automatic selfie image matting algorithm. Over-segmentation, region-wise matting and
 parallel processing are involved to save memory and speed up the program.
 
-|| <em class="icon-home"/> || project page || <em class="icon-film"/> || [video demo](https://youtu.be/8gFGsBY3rzg) ||
+|| <em class="icon-home"/> || [project page](/archive/projects/3d-camera) || <em class="icon-film"/> || [video demo](https://youtu.be/8gFGsBY3rzg) ||
 
 </td> 
 </tr>
@@ -81,7 +81,7 @@ parallel processing are involved to save memory and speed up the program.
 </td>
 <td></td>
 <td markdown="1">
-[**Image Matting Application**](/archive/projects/robust-matting/)
+[**Image Matting Application.**](/archive/projects/robust-matting/)
 - Developed an interactive application to cut foreground from an image based on Robust Image Matting algorithm.
 
 || <em class="icon-home"/> || [project page](/archive/projects/robust-matting/) || <em class="icon-github"/> || [source code](https://github.com/wangchuan/RobustMatting) ||
