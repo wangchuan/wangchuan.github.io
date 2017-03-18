@@ -81,7 +81,7 @@ parallel processing are involved to save memory and speed up the program.
 </td>
 <td></td>
 <td markdown="1">
-**Image Matting Application**
+[**Image Matting Application**](/archive/projects/robust-matting/)
 - Developed an interactive application to cut foreground from an image based on Robust Image Matting algorithm.
 
 || <em class="icon-home"/> || [project page](/archive/projects/robust-matting/) || <em class="icon-github"/> || [source code](https://github.com/wangchuan/RobustMatting) ||

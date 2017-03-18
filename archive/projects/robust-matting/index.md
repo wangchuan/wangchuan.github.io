@@ -17,11 +17,11 @@ lang: zh
 ---
 
 <p style="text-align:center;">
-	<a href="http://i.cs.hku.hk/~cwang/">Chuan Wang</a>
+	<a href="http://i.cs.hku.hk/~cwang/">Chuan Wang</a><sub>1</sub>
 </p>
 
 <p style="text-align:center;">
-	The University of Hong Kong, Hong Kong
+	<sub>1</sub>The University of Hong Kong, Hong Kong
 </p>
 
 <p style="text-align:center;">
@@ -34,7 +34,7 @@ lang: zh
 
 ### Abstract
 <p style="text-align: justify; text-justify: inter-word;">
-	Back to 2011, when I first started my Ph.D in HKU, my training project was to implement such a robust matting algorithm, based on Dr. Jue Wang's paper "Optimized Color Sampling for Robust Matting". From this project, I learnt the usages of libraries like OpenCV, and I also learnt to write my own sparse matrix library which supports dynamic entry update and feeding into Intel MKL to use its multithreading linear solver. Recently I sorted out the code and applied Eigen to solve the linear system by its built-in Conjugate Gradient method.
+	When I started my Ph.D in HKU in 2010, my graphics group needs a soft image segmentation tool to cut out the land part from the satellite maps of Hong Kong. So it became my training project to implement such a robust matting algorithm, based on Dr. Jue Wang's paper "Optimized Color Sampling for Robust Matting". From this project, I learnt the usages of libraries like OpenCV and QT, as well as wrote my own sparse matrix library which supports dynamic entry update and feeding into Intel MKL to use its multithreading linear solver. Recently I sorted out the code and applied Eigen to solve the linear system by its built-in Conjugate Gradient method. Note the shared code is in command line, a bit different with my original implementation with a GUI.
 </p>
 
 ---
@@ -45,7 +45,7 @@ lang: zh
 <tr>
 <td markdown="1">
 
-||<em class="icon-github"/>||[Code](https://github.com/wangchuan/RobustMatting)||
+||<em class="icon-github"/>||[Code (command-line only)](https://github.com/wangchuan/RobustMatting)||
 
 </td> 
 </tr>

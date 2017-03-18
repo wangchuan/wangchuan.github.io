@@ -1,6 +1,7 @@
 {% include JB/setup %}
 <!DOCTYPE html>
 <html {% if page.lang %}lang = "{{ page.lang }}"{% endif %}>
+
   <head>
     {% include html_meta %}
 	<!--{% include mathjax_support %}-->
@@ -19,6 +20,7 @@
     <link rel="stylesheet" type="text/css" media="all"
           href="/css/customize.css">
     <!-- add the page specified style sheet settings -->
+
     {% if page.style %}
     <style type="text/css">
       {{ page.style }}
@@ -63,6 +65,7 @@
 	<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 
   </head>
+
   <body>
     {% include nav_bar %}
     <div class="container-narrow">
