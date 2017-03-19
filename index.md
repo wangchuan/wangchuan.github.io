@@ -15,6 +15,8 @@ lang: zh
   </h1>
 </div>
 
+<!--![me](/img/main/me.jpg)-->
+
 ### About Me
 My name is Chuan Wang. I'm currently a Staff Researcher at Lenovo Hong Kong, working on Computer Vision and Machine Learning. Before joining Lenovo, I obtained my Ph.D degree of Computer Science from [The University of Hong Kong](http://www.hku.hk) in 2015, during which I worked at the Computer Graphics Group under the supervision of Prof. [Wenping Wang](https://www.cs.hku.hk/research/profile.jsp?teacher=wenping). I also hold a B.S. degree of Electronic Information Engineering obtained from [University of Science and Technology of China](http://www.ustc.edu.cn) in 2010.
 
