@@ -39,7 +39,7 @@ lang: zh
 </script>
 
 <!-- pagination links -->
-<div class="pagination align-center">
+<!--<div class="pagination align-center">
   <ul class="pagination">
     {% if paginator.next_page %}
     <li class="prev">
@@ -67,6 +67,9 @@ lang: zh
     </li>
     {% endif %}
   </ul>
+</div>-->
+<div class="pagination align-center">
+{% include post_pagination %}
 </div>
 
 <div>

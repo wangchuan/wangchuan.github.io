@@ -20,7 +20,7 @@ lang: zh
 <col >
 <tr style="border-bottom:1pt solid #eee">
 <td markdown="1">
-![captcha](/img/main/captcha.jpg)
+![captcha](/img/main/captcha.jpg){:class="img-shadow"}
 </td>
 <td></td>
 <td markdown="1">
@@ -38,7 +38,7 @@ lang: zh
 
 <tr style="border-bottom:1pt solid #eee" >
 <td markdown="1">
-![3dcam](/img/main/3dcam.jpg)
+![3dcam](/img/main/3dcam.jpg){:class="img-shadow"}
 </td>
 <td></td>
 <td markdown="1">
@@ -57,10 +57,9 @@ parallel processing are involved to save memory and speed up the program.
 </tr>
 
 <tr height="25"/>
-
 <tr style="border-bottom:1pt solid #eee" >
 <td markdown="1">
-![arcam](/img/main/arcam.gif)
+![arcam](/img/main/arcam.gif){:class="img-shadow"}
 </td>
 <td></td>
 <td markdown="1">
@@ -77,7 +76,7 @@ parallel processing are involved to save memory and speed up the program.
 
 <tr style="border-bottom:1pt solid #eee" >
 <td markdown="1">
-![rbmatting](/img/main/matting.jpg)
+![rbmatting](/img/main/matting.jpg){:class="img-shadow"}
 </td>
 <td></td>
 <td markdown="1">

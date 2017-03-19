@@ -26,7 +26,7 @@ lang: zh
 
 <tr style="border-bottom:1pt solid #eee" >
 <td markdown="1">
-![videovec](/img/main/videovec.jpg)
+![videovec](/img/main/videovec.jpg){:class="img-shadow"}
 </td>
 <td></td>
 <td markdown="1">
@@ -50,7 +50,7 @@ lang: zh
 
 <tr style="border-bottom:1pt solid #eee" >
 <td markdown="1">
-![spiden](/img/main/aaai.jpg)
+![spiden](/img/main/aaai.jpg){:class="img-shadow"}
 </td>
 <td></td>
 <td markdown="1">
@@ -73,7 +73,7 @@ lang: zh
 
 <tr style="border-bottom:1pt solid #eee" >
 <td markdown="1">
-![thesis](/img/main/hkulogo2.jpg)
+![thesis](/img/main/hkulogo2.jpg){:class="img-shadow"}
 </td>
 <td></td>
 <td markdown="1">
@@ -96,7 +96,7 @@ lang: zh
 
 <tr style="border-bottom:1pt solid #eee" >
 <td markdown="1">
-![videocoseg](/img/main/videocoseg.jpg)
+![videocoseg](/img/main/videocoseg.jpg){:class="img-shadow"}
 </td>
 <td></td>
 <td markdown="1">

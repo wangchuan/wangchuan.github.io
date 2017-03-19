@@ -12,7 +12,9 @@ lang: zh
 
 <link rel="stylesheet" href="/glyphicons/css/glyphicons.css">
 
-<h1 style="text-align:center;">3D Camera: RGBD Image Algorithms for Dual-camera Mobile Phone, Lenovo VIBE S1</h1>
+<h1 style="text-align:center;">3D Camera: RGBD Image Algorithms for Dual-camera Mobile Phone, </h1>
+<h1 style="text-align:center;">Lenovo VIBE S1</h1>
+
 
 ---
 
