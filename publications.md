@@ -82,7 +82,7 @@ lang: zh
 <div><i>The University of Hong Kong, January 2015.</i></div>
 <div><i>"a detailed version of the works in video object co-segmentation and video vectorization"</i></div>
 
-|| <em class="icon-file"></em> || [thesis](/archive/research/thesis.pdf) ||
+|| <em class="icon-file"></em> || thesis || <!--[thesis](/archive/research/thesis.pdf)-->
 
 </td> 
 </tr>
