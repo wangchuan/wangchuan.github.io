@@ -23,6 +23,8 @@ lang: zh
 	&nbsp;&nbsp;&nbsp;&nbsp;
 	Min Wang<sup>1</sup>
 	&nbsp;&nbsp;&nbsp;&nbsp;
+	Yi Yang<sup>1</sup>
+	&nbsp;&nbsp;&nbsp;&nbsp;
 	<a href="http://www.jiachen.org/">Jia Chen</a><sup>1</sup>
 </p>
 
@@ -35,7 +37,7 @@ lang: zh
 </p>
 
 <p style="margin-bottom: 30px; text-align:center;" markdown="1">
-	Figure: (a) The dashboard view of DeepNEX, showing how many containers the user created. (b) Run Caffe command line in Ternimal. (c) Run TensorFlow in Jupyter Notebook. (d) System resource monitor view.
+	Figure: (a) The dashboard view of DeepNEX, showing all containers the user created. (b) System resource monitor view. (c) Run TensorFlow in Jupyter Notebook. (d) Run Caffe command line in Terminal.
 </p>
 
 ### Abstract
