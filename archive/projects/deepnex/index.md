@@ -18,9 +18,12 @@ lang: zh
 
 <p style="text-align:center;">
 	<a href="http://i.cs.hku.hk/~cwang/">Chuan Wang</a><sup>1</sup>
-	<a href="http://i.cs.hku.hk/~cwang/">Yaoman Li</a><sup>1</sup>
-	<a href="http://i.cs.hku.hk/~cwang/">Min Wang</a><sup>1</sup>
-	<a href="http://i.cs.hku.hk/~cwang/">Jia Chen</a><sup>1</sup>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	Yaoman Li<sup>1</sup>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	Min Wang<sup>1</sup>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://www.jiachen.org/">Jia Chen</a><sup>1</sup>
 </p>
 
 <p style="text-align:center;">
@@ -37,7 +40,8 @@ lang: zh
 
 ### Abstract
 <p style="text-align: justify; text-justify: inter-word;" markdown="1">
-	We developed a distributed multi-tenant private cloud platform for users who are interested in deep learning development. Our system runs in a cluster and supports multiple users to develop and run deep learning program simultaneously. GPUs, CPUs and Memory can be well assigned by administrator in a web interface. To support the development and sales of our system, I refactored various deep learning projects for demonstration to our customers, including image / text sentiment classification, image-to-image translation by CGAN, image recolorization by autoencoder etc., during which I also leart the idea of the related deep learning techniques.
+	We developed a distributed multi-tenant private cloud platform for users who are interested in deep learning development. Our system runs in a cluster and supports multiple users to develop and run deep learning programs simultaneously. In our system, GPUs, CPUs and Memory can be well assigned by administrator in a web interface. And our system supports multiple mainstream toolkits like Caffe, TensorFlow, MXNet. Users can directly call these toolkits without any boring configurations.
+	To support the development and sales of our system, I refactored various deep learning projects for demonstration and easy usage to our customers. These demo code include: image / text sentiment classification, image-to-image translation by CGAN, image recolorization by autoencoder etc., during which I also leart the related techniques.
 </p>
 
 ---
