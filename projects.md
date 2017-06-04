@@ -21,7 +21,7 @@ lang: zh
 
 <tr style="border-bottom:1pt solid #eee">
 <td markdown="1">
-![deepnex](/img/main/deepnex.jpg){:class="img-shadow"}
+![deepnex](/img/main/deepnex.png){:class="img-shadow"}
 </td>
 <td></td>
 <td markdown="1">
