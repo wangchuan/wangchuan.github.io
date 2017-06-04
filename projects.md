@@ -18,6 +18,22 @@ lang: zh
 <col width="20%">
 <col width="10">
 <col >
+
+<tr style="border-bottom:1pt solid #eee">
+<td markdown="1">
+![deepnex](/img/main/deepnex.jpg){:class="img-shadow"}
+</td>
+<td></td>
+<td markdown="1">
+[**Lenovo DeepNEX: A Distributed Multi-tenant Private Cloud for Deep Learning Development**](/archive/projects/deepnex)
+- Integrated deep learning toolkits e.g. Caffe, TensorFlow etc. into Docker container for use in the cloud.
+- Refactored deep learning projects for demonstration to our customers.
+
+|| <em class="icon-home"/> || [project page](/archive/projects/deepnex) ||
+
+</td> 
+</tr>
+
 <tr style="border-bottom:1pt solid #eee">
 <td markdown="1">
 ![captcha](/img/main/captcha.jpg){:class="img-shadow"}
