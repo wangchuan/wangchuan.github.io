@@ -45,7 +45,7 @@ lang: zh
 - An end-to-end solution which avoids image segmentation for a single character.
 - Augmented synthesized data, to avoid overfitting when model applied to real data.
 
-|| <em class="icon-home"/> || [project page](/archive/projects/captcha-crack) ||
+|| <em class="icon-home"/> || [project page](/archive/projects/captcha-crack) || <em class="icon-github"/> || [source code](https://github.com/wangchuan/Captcha-TensorFlow) ||
 
 </td> 
 </tr>
