@@ -35,7 +35,7 @@ lang: zh
 <div><i>IEEE Transactions on Image Processing, 2017</i></div>
 <div><i>"converting a raster video into its vectorized version, with perservation of the video features"</i></div>
 
-|| <em class="icon-home"></em> || [project page](/archive/research/videovec/) || <em class="icon-file"></em> || [paper](/archive/research/videovec/paper.pdf) || <em class="icon-film"></em> || [video demo](https://drive.google.com/file/d/0B36LTnSOGMdHenloVjdLcXdQSU0/view) ||
+|| <em class="icon-home"></em> || [project page](/archive/research/videovec/) || <em class="icon-file"></em> || [paper](/archive/research/videovec/paper.pdf) || <em class="icon-film"></em> || [video demo](https://youtu.be/KmPdjB8f4ww) ||
 
 </td> 
 </tr>

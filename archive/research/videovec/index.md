@@ -52,15 +52,15 @@ lang: zh
 
 </td> 
 </tr>
-
-<tr>
-<td markdown="1">
-
-||<em class="icon-film"/>||[video demo](https://drive.google.com/file/d/0B36LTnSOGMdHenloVjdLcXdQSU0/view)||
-
-</td> 
-</tr>
 </table>
+
+---
+
+### Video Demo
+
+<p style="margin-bottom: 30px; text-align:center; width=100%;">
+<iframe width="100%" height="480" src="https://youtu.be/KmPdjB8f4ww" frameborder="0" allowfullscreen></iframe>
+</p>
 
 ---
 
@@ -70,6 +70,9 @@ lang: zh
   title={Video Vectorization via Tetrahedral Remeshing},
   author={Wang, Chuan and Zhu, Jie and Guo, Yanwen and Wang, Wenping},
   journal={IEEE Transactions on Image Processing},
+  volume={26},
+  number={4},
+  pages={1833--1844},
   year={2017},
   publisher={IEEE}
 }
