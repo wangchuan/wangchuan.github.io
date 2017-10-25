@@ -21,6 +21,21 @@ lang: zh
 
 <tr style="border-bottom:1pt solid #eee">
 <td markdown="1">
+![blood-cell](/img/main/cells.jpg){:class="img-shadow"}
+</td>
+<td></td>
+<td markdown="1">
+[**Blood Cell Classification via CNN and Hard Negative Mining**](/archive/projects/blood-cell-classification)
+- A blood cell classification solution for a famous medical device manufacturer in China.
+- The solution is based on CNN. Hard Negative Mining is adopted to achieve accuracy over 90%.
+
+|| <em class="icon-home"/> || [project page](/archive/projects/blood-cell-classification) ||
+
+</td> 
+</tr>
+
+<tr style="border-bottom:1pt solid #eee">
+<td markdown="1">
 ![deepnex](/img/main/deepnex.png){:class="img-shadow"}
 </td>
 <td></td>
@@ -30,6 +45,21 @@ lang: zh
 - Refactored deep learning projects for demonstration to our customers.
 
 || <em class="icon-home"/> || [project page](/archive/projects/deepnex) ||
+
+</td> 
+</tr>
+
+<tr style="border-bottom:1pt solid #eee">
+<td markdown="1">
+![bone-age](/img/main/bone-age.jpg){:class="img-shadow"}
+</td>
+<td></td>
+<td markdown="1">
+[**Bone Age Analysis via Deep Regression Networks**](/archive/projects/bone-age-analysis)
+- A bone age analysis solution for Shanghai Children's Hospital, China.
+- Developed two deep regression networks to auto-detect hand joints in X-ray images, and predict ages based on the ROIs of the joints.
+
+|| <em class="icon-home"/> || [project page](/archive/projects/bone-age-analysis) || <em class="icon-github"/> || [source code (the annotation tool)](https://github.com/wangchuan/Qt-GUI-Startup-Project) ||
 
 </td> 
 </tr>

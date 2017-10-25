@@ -45,8 +45,40 @@ lang: zh
 	We developed a distributed multi-tenant private cloud platform for users who are interested in deep learning development. Our system runs in a cluster and supports multiple users to develop and run deep learning programs simultaneously. In our system, GPUs, CPUs and Memory can be well assigned by administrator in a web interface. And our system supports multiple mainstream toolkits like Caffe, TensorFlow, MXNet. Users can directly call these toolkits without any boring configurations.
 </p>
 <p style="text-align: justify; text-justify: inter-word;" markdown="1">
-	To support the development and sales of our system, I refactored various deep learning projects for demonstration and easy usage to our customers. These demo code include: image / text sentiment classification, image-to-image translation by CGAN, image recolorization by autoencoder etc., during which I also leart the related techniques.
+	To support the development and sales of our system, I refactored various deep learning projects for demonstration and easy usage to our customers. These demo code include: 
 </p>
+<ul>
+  <li>Image / text sentiment classification</li>
+  <li>Image-to-image translation by CGAN</li>
+  <li>Image recolorization by autoencoder</li>
+</ul>  
+<p>
+etc., during which I also leart the related techniques.
+</p>
+
+---
+
+### Promotion
+<p style="text-align: justify; text-justify: inter-word;" markdown="1">
+	Our product is on sale and has attracted many potential customers since 2016, and we have already obtained many orders. Customers include universities, institutes and companies around the Greater China. Please contact Dr. Jun Luo at `jluo1 (at) lenovo (dot) com` for details and trail.
+</p>
+
+---
+
+### Code and Tutorials
+
+<table style="width:600px">
+
+<tr>
+<td markdown="1">
+
+||<em class="icon-github"/>||[Code (Comming Soon)]()||
+||<em class="icon-keynote"/>||[Tutorial Slides (Comming Soon)]()||
+
+</td> 
+</tr>
+
+</table>
 
 ---
 
