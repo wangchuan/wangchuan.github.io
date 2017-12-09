@@ -8,9 +8,9 @@ tags: tensorflow
 * TOC
 {:toc}
 
-#### The Original Version
+### The Original Version
 Refer to Goodfellow's [paper](https://arxiv.org/pdf/1406.2661.pdf).
-##### The Problem
+#### The Problem
 We have a dataset, represented as $\{\vec{x}\}$, the data follows an unknown distribution $p_g$, now we would like to generate new data that looks identical to $\vec{x}$. The idea is as follows:
 
 1. Define a random noise $\vec{z}$ following distribution $p_z(z)$, and let it pass a "Generator" $G(z;\theta_g)$, where $\theta_g$ is the parameters of $G$ ($G$ is differentiable). So we will get an output saying $G(z)$. It is a fake data.
@@ -39,19 +39,25 @@ $$
 $$
 
 We can define two energy functions:
+
 $$
 \begin{align*}
 E_1(D) &= \mathbf{E}_{x\sim p_{data}(x)}[-\log D(x)] + \mathbf{E}_{z\sim p_z(z)}[-\log(1 - D(G(z)))] \\
 E_2(G) &= \mathbf{E}_{z\sim p_z(z)}[-\log(1 - D(G(z)))]
 \end{align*}
 $$
+
 We switch between minimizing $E_1$ and maximizing $E_2$ to optimize the overall energy $V(G,D)$. We can also modify $E_2$ a little bit so that
+
 $$
 E_2(G) = \mathbf{E}_{z\sim p_z(z)}[-\log(D(G(z)))]
 $$
-which makes maximizing $E_2$ to minimizing $E_2$. 
 
+which makes "maximizing" $E_2$ to "minimizing" $E_2$. 
+
+#### TensorFlow Implementation
 In TensorFlow, `tf.nn.sigmoid_cross_entropy_with_logits(x, z)` calculates like this:
+
 $$
  z * -\log(\text{sigmoid}(x)) + (1 - z) * -\log(1 - \text{sigmoid}(x))
 $$
@@ -65,11 +71,16 @@ real_data = ...
 D_logits_real = discriminator(real_data) # not probability yet, only digits, scalar
 D_logits_fake = discriminator(fake_data) # not probability yet, only digits, scalar
 
-d_loss_real = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=D_logits_real, labels=tf.ones_like(D_logits_real))) # -log(sigmoid(x))
+f = tf.nn.sigmoid_cross_entropy_with_logits
 
-d_loss_fake = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=D_logits_fake, labels=tf.zeros_like(D_logits_fake))) # -log(1 - sigmoid( g(z)'s digit via discriminator ))
+# -log(sigmoid(x)): 
+d_loss_real = tf.reduce_mean(f(logits=D_logits_real, labels=tf.ones_like(D_logits_real))) 
 
-g_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=D_logits_fake, labels=tf.ones_like(D_logits_fake))) # -log(sigmoid( g(z)'s digit via discriminator )) 
+# -log(1 - sigmoid( g(z)'s digit via discriminator ))
+d_loss_fake = tf.reduce_mean(f(logits=D_logits_fake, labels=tf.zeros_like(D_logits_fake))) 
+
+# -log(sigmoid( g(z)'s digit via discriminator ))
+g_loss = tf.reduce_mean(f(logits=D_logits_fake, labels=tf.ones_like(D_logits_fake))) 
 
 d_loss = d_loss_real + d_loss_fake
 
@@ -78,16 +89,6 @@ t_vars = tf.trainable_variables()
 self.d_vars = [var for var in t_vars if 'd_' in var.name]
 self.g_vars = [var for var in t_vars if 'g_' in var.name]
         
-d_optim = tf.train.AdamOptimizer(args.lr, beta1=args.beta1) \
-                          .minimize(self.d_loss, var_list=self.d_vars)
-g_optim = tf.train.AdamOptimizer(args.lr, beta1=args.beta1) \
-                          .minimize(self.g_loss, var_list=self.g_vars)
+d_optim = tf.train.AdamOptimizer(args.lr, beta1=args.beta1).minimize(self.d_loss, var_list=self.d_vars)
+g_optim = tf.train.AdamOptimizer(args.lr, beta1=args.beta1).minimize(self.g_loss, var_list=self.g_vars)
 ```
-
-#### Tracking based on GAN?
-
-frame $x_{t-1}, x_t$, and the bbox as a mask $m$, is a pair.
-$x_{t-1}, x_t \rightarrow m$
-
-1. Generator: $x_{t-1}, x_t \rightarrow m^*$, $m^*$ is fake mask, i.e. $G(x_{t-1}, x_{t}) = m^*$
-2. Discriminator to distinguish $x_{t-1}, x_t, m^*$ and $x_{t-1}, x_t, m$.
