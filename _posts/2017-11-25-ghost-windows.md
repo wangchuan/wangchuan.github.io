@@ -16,3 +16,7 @@ tags: os
 - Boot from 老毛桃U盘启动盘制作工具,  Restore the Mirror File to Disk C;
 - Re-create MBR, by Going to Win2003 PE System;
 - Re-boot the computer to Safe Mode and Install Drivers
+
+#### Downloads
+##### Icons:
+[]()
