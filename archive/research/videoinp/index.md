@@ -30,6 +30,10 @@ lang: zh
 </p>
 
 <p style="text-align:center;">
+	<i>The 33th AAAI Conference on Artificial Intelligence (AAAI 2019)</i>
+</p>
+
+<p style="text-align:center;">
 	<i>arXiv <a href="https://arxiv.org/abs/1806.08482">https://arxiv.org/abs/1806.08482</a></i>
 </p>
 
@@ -59,7 +63,7 @@ lang: zh
 <tr>
 <td markdown="1">
 
-||<em class="icon-download"/>||[supplemental (video results): sup-v1.zip](sup-v1.zip)||
+||<em class="icon-download"/>||supplemental (video results) (coming soon)||
 
 </td> 
 </tr>
