@@ -76,19 +76,25 @@ lang: zh
 </td> 
 </tr>
 
+<tr>
+<td markdown="1">
+
+||<em class="icon-keynote"/>||[Slides](slides.pptx)||
+
+</td> 
+</tr>
+
 </table>
 
 ---
 
-<!--
 ### Video Demo
 
 <p style="margin-bottom: 30px; text-align:center; width=100%;">
-<iframe width="100%" height="480" src="https://www.youtube.com/embed/KmPdjB8f4ww" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="480" src="https://youtu.be/yI4gA4nTUbQ" frameborder="0" allowfullscreen></iframe>
 </p>
 
 ---
--->
 
 
 
