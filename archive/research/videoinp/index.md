@@ -91,7 +91,7 @@ lang: zh
 ### Video Demo
 
 <p style="margin-bottom: 30px; text-align:center; width=100%;">
-<iframe width="100%" height="480" src="https://youtu.be/yI4gA4nTUbQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yI4gA4nTUbQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 ---
