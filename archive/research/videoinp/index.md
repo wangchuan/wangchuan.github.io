@@ -63,7 +63,7 @@ lang: zh
 <tr>
 <td markdown="1">
 
-||<em class="icon-download"/>||supplemental (video results) (coming soon)||
+||<em class="icon-download"/>||[supplemental video results](./sup-aaai-video-demos.zip)||
 
 </td> 
 </tr>
@@ -71,7 +71,7 @@ lang: zh
 <tr>
 <td markdown="1">
 
-||<em class="icon-github"/>||source code & dataset (coming soon)||
+||<em class="icon-github"/>||source code (coming soon)||
 
 </td> 
 </tr>
