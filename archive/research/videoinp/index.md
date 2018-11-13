@@ -102,11 +102,11 @@ lang: zh
 
 
 ```bibtex
-@article{wang2018videoinp,
+@inproceedings{wang2018videoinp,
   title={Video Inpainting by Jointly Learning Temporal Structure and Spatial Details},
   author={Wang, Chuan and Huang, Haibin and Han, Xiaoguang and Wang, Jue},
-  journal={arXiv preprint arXiv:1806.08482},
-  year={2018}
+  booktitle={Proceedings of the 33th AAAI Conference on Artificial Intelligence},
+  year={2019}
 }
 ```
 
