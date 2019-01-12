@@ -10,4 +10,4 @@ tags: paper
 
 ### Papers citing my papers
 
-[Semi-supervised learning based on GAN with mean and variance feature matching](../../../../archieve/research/videoinp/08489993.pdf)
+[Semi-supervised learning based on GAN with mean and variance feature matching](../../../../archive/research/08489993.pdf)
