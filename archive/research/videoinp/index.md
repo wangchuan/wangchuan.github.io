@@ -84,6 +84,14 @@ lang: zh
 </td> 
 </tr>
 
+<tr>
+<td markdown="1">
+
+||<em class="icon-posterous-spaces"/>||[Poster](poster.pdf)||
+
+</td> 
+</tr>
+
 </table>
 
 ---
