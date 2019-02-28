@@ -33,18 +33,18 @@ lang: zh
 	<sup>3</sup>UCLA
 </p>
 
-<!--<p style="text-align:center;">
-	<i>Submitted to CVPR 2019</i>
-</p>-->
+<p style="text-align:center;">
+	<i>Accepted by CVPR 2019</i>
+</p>
 
 <p style="text-align:center;">
 	<i>arXiv <a href="https://arxiv.org/abs/1901.02840">https://arxiv.org/abs/1901.02840</a></i>
 </p>
 
-<!--<p style="margin-bottom: 30px; text-align:center;">
-	<img src="main.jpg" alt="videoinp" style="width:100%">
-  Figure: Inpainted frames on datasets FaceForensics (a ~ f) and Caltech (g, h). In each panel, the two rows represent two frames of a video, and the five columns from left to right are input, results by 3DCN, 2DCN and CombCN (ours), as well as the target ground truth.
-</p>-->
+<p style="margin-bottom: 30px; text-align:center;">
+	<img src="main.jpg" alt="gif2video" style="width:100%">
+  Figure: Qualitative Results of GIF Color Dequantization on GIF-Faces. Pix2Pix and CCDNet trained without image gradientbased losses cannot remove quantization artifacts such as flat regions and false contours very well. Training CCDNet with adversarial loss yields more realistic and colorful images (see the color of the skin and the lips). Best viewed on a digital device.
+</p>
 
 ### Abstract
 <p style="text-align: justify;
