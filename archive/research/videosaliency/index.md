@@ -17,12 +17,12 @@ lang: zh
 ---
 
 <p style="text-align:center;">
-	Pengxiang Yan<sup>1</sup>&nbsp;
-	<a href="http://guanbinli.com/">Guanbin Li</a><sup>1</sup>&nbsp;
-	Yuan Xie<sup>1</sup>&nbsp;
-	<a href="http://sse.cuhk.edu.cn/en/content/7517">Zhen Li</a><sup>2</sup>&nbsp;
-	<a href="/index.html">Chuan Wang</a><sup>3</sup>&nbsp;
-	Tianshui Chen<sup>1</sup>&nbsp;
+	Pengxiang Yan<sup>1</sup>&nbsp;&nbsp;
+	<a href="http://guanbinli.com/">Guanbin Li</a><sup>1</sup>&nbsp;&nbsp;
+	Yuan Xie<sup>1</sup>&nbsp;&nbsp;
+	<a href="http://sse.cuhk.edu.cn/en/content/7517">Zhen Li</a><sup>2</sup>&nbsp;&nbsp;
+	<a href="/index.html">Chuan Wang</a><sup>3</sup>&nbsp;&nbsp;
+	Tianshui Chen<sup>1</sup>&nbsp;&nbsp;
 	<a href="http://www.linliang.net/">Liang Lin</a><sup>1</sup>&nbsp;
 </p>
 

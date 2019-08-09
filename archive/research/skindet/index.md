@@ -17,13 +17,13 @@ lang: zh
 ---
 
 <p style="text-align:center;">
-	<a href="/index.html">Yi He</a><sup>1*</sup>&nbsp;
-	<a href="/index.html">Jiayuan Shi</a><sup>2*</sup>&nbsp;
-	<a href="/index.html">Chuan Wang</a><sup>2&dagger;</sup>&nbsp;
-	<a href="https://brotherhuang.github.io/">Haibin Huang</a><sup>2</sup>&nbsp;
-	<a href="/index.html">Jiaming Liu</a><sup>2</sup>&nbsp;
-	<a href="http://guanbinli.com/">Guanbin Li</a><sup>3</sup>&nbsp;
-	<a href="http://dutmedia.org/risheng-liu/">Risheng Liu</a><sup>1</sup>&nbsp;
+	<a href="/index.html">Yi He</a><sup>1*</sup>&nbsp;&nbsp;
+	<a href="/index.html">Jiayuan Shi</a><sup>2*</sup>&nbsp;&nbsp;
+	<a href="/index.html">Chuan Wang</a><sup>2&dagger;</sup>&nbsp;&nbsp;
+	<a href="https://brotherhuang.github.io/">Haibin Huang</a><sup>2</sup>&nbsp;&nbsp;
+	<a href="/index.html">Jiaming Liu</a><sup>2</sup>&nbsp;&nbsp;
+	<a href="http://guanbinli.com/">Guanbin Li</a><sup>3</sup>&nbsp;&nbsp;
+	<a href="http://dutmedia.org/risheng-liu/">Risheng Liu</a><sup>1</sup>&nbsp;&nbsp;
 	<a href="http://www.juew.org/">Jue Wang</a><sup>2</sup>&nbsp;
 </p>
 

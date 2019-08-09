@@ -17,16 +17,16 @@ lang: zh
 ---
 
 <p style="text-align:center;">
-	Jiaming Liu<sup>1</sup>&nbsp;
-	Chi-Hao Wu<sup>1</sup>&nbsp;
-	Yuzhi Wang<sup>2</sup>&nbsp;
-	Qin Xu<sup>1</sup>&nbsp;
-	Yuqian Zhou<sup>1</sup>&nbsp;
-	<a href="https://brotherhuang.github.io/">Haibin Huang</a><sup>1</sup>&nbsp;<br>
-	<a href="/index.html">Chuan Wang</a><sup>1</sup>&nbsp;
-	Shaofan Cai<sup>1</sup>&nbsp;
-	Yifan Ding<sup>3,1</sup>&nbsp;
-	Haoqiang Fan<sup>1</sup>&nbsp;
+	Jiaming Liu<sup>1</sup>&nbsp;&nbsp;
+	Chi-Hao Wu<sup>1</sup>&nbsp;&nbsp;
+	Yuzhi Wang<sup>2</sup>&nbsp;&nbsp;
+	Qin Xu<sup>1</sup>&nbsp;&nbsp;
+	Yuqian Zhou<sup>1</sup>&nbsp;&nbsp;
+	<a href="https://brotherhuang.github.io/">Haibin Huang</a><sup>1</sup>&nbsp;&nbsp;<br>
+	<a href="/index.html">Chuan Wang</a><sup>1</sup>&nbsp;&nbsp;
+	Shaofan Cai<sup>1</sup>&nbsp;&nbsp;
+	Yifan Ding<sup>3,1</sup>&nbsp;&nbsp;
+	Haoqiang Fan<sup>1</sup>&nbsp;&nbsp;
 	<a href="http://www.juew.org/">Jue Wang</a><sup>2</sup>&nbsp;
 </p>
 
@@ -39,8 +39,7 @@ lang: zh
 </p>
 
 <p style="text-align:center;">
-	<i>Accepted by CVPR Workshop 2019</i>
-	<i>Winner Award (Top 1) in NTIRE 2019 Challenge on Real Image Denoising</i>
+	<i>Accepted by CVPR Workshop 2019 <br>Winner Award (Top 1) in NTIRE 2019 Challenge on Real Image Denoising</i>
 </p>
 
 <p style="text-align:center;">
@@ -67,6 +66,14 @@ presents new challenges such as how to effectively handle various Bayer patterns
 <td markdown="1">
 
 ||<em class="icon-file"/>||[paper](paper.pdf)||
+
+</td>
+</tr>
+
+<tr>
+<td markdown="1">
+
+||<em class="icon-github"/>||[code](https://github.com/Jiaming-Liu/BayerUnifyAug)||
 
 </td> 
 </tr>
@@ -116,6 +123,13 @@ presents new challenges such as how to effectively handle various Bayer patterns
 
 
 ```bibtex
+@inproceedings{liu2019learning,
+  title={Learning Raw Image Denoising with Bayer Pattern Unification and Bayer Preserving Augmentation},
+  author={Liu, Jiaming and Wu, Chi-Hao and Wang, Yuzhi and Xu, Qin and Zhou, Yuqian and Huang, Haibin and Wang, Chuan and Cai, Shaofan and Ding, Yifan and Fan, Haoqiang and others},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},
+  pages={0--0},
+  year={2019}
+}
 
 ```
 
