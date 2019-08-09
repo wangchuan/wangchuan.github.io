@@ -36,6 +36,12 @@ lang: zh
 </p>
 
 <p style="text-align:center;">
+	<sup>*</sup>Equal Contributors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<sup>&dagger;</sup>Corresponding Author
+</p>
+
+<p style="text-align:center;">
 	<i>Accepted by ICCV 2019</i>
 </p>
 
