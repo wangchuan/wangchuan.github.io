@@ -107,14 +107,12 @@ Generating plausible hair image given limited guidance, such as sparse sketches 
 
 
 ```bibtex
-@inproceedings{liu2019learning,
-  title={Learning Raw Image Denoising with Bayer Pattern Unification and Bayer Preserving Augmentation},
-  author={Liu, Jiaming and Wu, Chi-Hao and Wang, Yuzhi and Xu, Qin and Zhou, Yuqian and Huang, Haibin and Wang, Chuan and Cai, Shaofan and Ding, Yifan and Fan, Haoqiang and others},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},
-  pages={0--0},
+@article{qiu2019two,
+  title={Two-phase Hair Image Synthesis by Self-Enhancing Generative Model},
+  author={Qiu, Haonan and Wang, Chuan and Zhu, Hang and Zhu, Xiangyu and Gu, Jinjin and Han, Xiaoguang},
+  journal={arXiv preprint arXiv:1902.11203},
   year={2019}
 }
-
 ```
 
 <!--<table style="width:100%">
