@@ -64,7 +64,7 @@ However, existing data-driven approaches heavily rely on a large quantity of pix
 <tr>
 <td markdown="1">
 
-||<em class="icon-file"/>||[paper (Coming Soon)](./index.html)||
+||<em class="icon-file"/>||[paper](https://arxiv.org/pdf/1908.04051.pdf)||
 
 </td> 
 </tr>
@@ -114,7 +114,12 @@ However, existing data-driven approaches heavily rely on a large quantity of pix
 
 
 ```bibtex
-
+@article{yan2019semi,
+  title={Semi-Supervised Video Salient Object Detection Using Pseudo-Labels},
+  author={Yan, Pengxiang and Li, Guanbin and Xie, Yuan and Li, Zhen and Wang, Chuan and Chen, Tianshui and Lin, Liang},
+  journal={arXiv preprint arXiv:1908.04051},
+  year={2019}
+}
 ```
 
 <!--<table style="width:100%">

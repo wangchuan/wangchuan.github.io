@@ -118,7 +118,12 @@ In this paper we present a new data-driven method for robust skin detection from
 
 
 ```bibtex
-
+@article{he2019semi,
+  title={Semi-supervised Skin Detection by Network with Mutual Guidance},
+  author={He, Yi and Shi, Jiayuan and Wang, Chuan and Huang, Haibin and Liu, Jiaming and Li, Guanbin and Liu, Risheng and Wang, Jue},
+  journal={arXiv preprint arXiv:1908.01977},
+  year={2019}
+}
 ```
 
 <!--<table style="width:100%">
