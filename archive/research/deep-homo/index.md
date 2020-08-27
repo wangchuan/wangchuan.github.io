@@ -34,6 +34,12 @@ lang: zh
 </p>
 
 <p style="text-align:center;">
+	<sup>*</sup>Joint First Authors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<sup>#</sup>Corresponding Author
+</p>
+
+<p style="text-align:center;">
 	<i>The 16th AAAI European Conference on Computer Vision (ECCV 2020)</i>
 </p>
 
@@ -43,7 +49,7 @@ lang: zh
 
 <p style="margin-bottom: 30px; text-align:center;">
 	<img src="main.jpg" alt="deephomo" style="width:100%">
-  Figure: Inpainted frames on datasets FaceForensics (a ~ f) and Caltech (g, h). In each panel, the two rows represent two frames of a video, and the five columns from left to right are input, results by 3DCN, 2DCN and CombCN (ours), as well as the target ground truth.
+	Our deep homography estimation on challenging cases, compared with one traditional feature-based, i.e. SIFT + RANSAC and one unsupervised DNN-based method. (a) An example with dominate moving foreground. (b) A low texture example. (c) A low light example. We mix the blue and green channels of the warped image and the red channel of the target image to obtain the visualization results as above, where the misaligned pixels appear as red or green ghosts. The same visualization method is applied for the rest of this paper.
 </p>
 
 ### Abstract
@@ -67,7 +73,7 @@ lang: zh
 <tr>
 <td markdown="1">
 
-||<em class="icon-github"/>||<a href="https://github.com/JirongZhang/DeepHomography">Source Code</a>||
+||<em class="icon-github"/>||<a href="https://github.com/JirongZhang/DeepHomography">source code</a>||
 
 </td> 
 </tr>
@@ -75,7 +81,7 @@ lang: zh
 <tr>
 <td markdown="1">
 
-||<em class="icon-keynote"/>||Coming Soon||
+||<em class="icon-keynote"/>||coming soon||
 
 </td> 
 </tr>
