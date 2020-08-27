@@ -40,7 +40,7 @@ lang: zh
 </p>
 
 <p style="text-align:center;">
-	<i>The 16th European Conference on Computer Vision (ECCV 2020)</i>
+	<i>The 16th European Conference on Computer Vision (ECCV 2020), Oral</i>
 </p>
 
 <p style="text-align:center;">
@@ -78,10 +78,21 @@ lang: zh
 </td> 
 </tr>
 
+</table>
+
+---
+
+### Video Demo
+
+<p style="margin-bottom: 30px; text-align:center; width=100%;">
+<iframe width="100%" height="480" src="https://youtu.be/KJrBrUsXgIU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+<table style="width:600px">
 <tr>
 <td markdown="1">
 
-||<em class="icon-keynote"/>||coming soon||
+||<em class=" icon-play-button"/>||<a href="https://www.bilibili.com/video/BV1Qp4y1Y7nB/">Bilibili</a>||
 
 </td> 
 </tr>
