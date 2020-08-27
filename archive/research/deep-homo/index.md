@@ -40,7 +40,7 @@ lang: zh
 </p>
 
 <p style="text-align:center;">
-	<i>The 16th AAAI European Conference on Computer Vision (ECCV 2020)</i>
+	<i>The 16th European Conference on Computer Vision (ECCV 2020)</i>
 </p>
 
 <p style="text-align:center;">
@@ -49,7 +49,7 @@ lang: zh
 
 <p style="margin-bottom: 30px; text-align:center;">
 	<img src="main.jpg" alt="deephomo" style="width:100%">
-	Our deep homography estimation on challenging cases, compared with one traditional feature-based, i.e. SIFT + RANSAC and one unsupervised DNN-based method. (a) An example with dominate moving foreground. (b) A low texture example. (c) A low light example. We mix the blue and green channels of the warped image and the red channel of the target image to obtain the visualization results as above, where the misaligned pixels appear as red or green ghosts. The same visualization method is applied for the rest of this paper.
+	Figure. Our deep homography estimation on challenging cases, compared with one traditional feature-based, i.e. SIFT + RANSAC and one unsupervised DNN-based method. (a) An example with dominate moving foreground. (b) A low texture example. (c) A low light example. We mix the blue and green channels of the warped image and the red channel of the target image to obtain the visualization results as above, where the misaligned pixels appear as red or green ghosts. The same visualization method is applied for the rest of this paper.
 </p>
 
 ### Abstract
