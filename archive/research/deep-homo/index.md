@@ -108,9 +108,10 @@ lang: zh
 
 ```bibtex
 @inproceedings{zhang2020content,
-  title={Content-Aware Unsupervised Deep Homography Estimation},
-  author={Zhang, Jirong and Wang, Chuan and Liu, Shuaicheng and Jia, Lanpeng and Wang, Jue and Zhou, Ji and Sun, Jian},
+  title={Content-aware unsupervised deep homography estimation},
+  author={Zhang, Jirong and Wang, Chuan and Liu, Shuaicheng and Jia, Lanpeng and Ye, Nianjin and Wang, Jue and Zhou, Ji and Sun, Jian},
   booktitle={European Conference on Computer Vision},
+  pages={653--669},
   year={2020},
   organization={Springer}
 }
